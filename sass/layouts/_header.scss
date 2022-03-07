@@ -1,0 +1,88 @@
+header {
+    background-color: $secondary-color;
+
+    .header-top {
+        background-color: $black-color;
+        color: $gray-color;
+        height: 30px;
+
+        font-size: $fs-md;
+
+        @include respond-to('smallphone-and-down') {
+            display: none;
+        }
+    }
+
+    .header-right {
+        @include respond-to('smallphone-and-down') {
+            display: none;
+        }
+    }
+
+    .cart {
+        width: 200px;
+        i {
+            font-size: 20px;
+        }
+
+        span {
+            font-size: $fs-md;
+        }
+    }
+
+    .support-number  {
+        color: $gray-color;
+
+        i {
+            margin-right: 5px;
+        }
+
+        p {
+            font-size: $fs-md;
+        }
+    }
+}
+
+.header__nav {
+    background-color: $primary-color;
+
+    button {
+        border: none;
+        background-color: transparent;
+        padding: 0 10px 0 0;
+        color: $white-color;
+        font-size: $fs-xl;
+
+        @include respond-to('smallphone-and-down') {
+            padding: 10px 0;
+        }
+    }
+
+    ul {
+        @include respond-to('smallphone-and-down') {
+            flex-direction: column;
+            display: block;
+            background-color: $primary-color;
+            position: absolute;
+            z-index: 3;
+            top: 0;
+            left: -100%;
+        }
+    }
+
+    .container {
+        div {
+            @include respond-to('smallphone-and-down') {
+                justify-content: space-between;
+                position: relative;
+            }  
+        }
+    }
+
+    .nav-right {
+        display: none;
+        @include respond-to('smallphone-and-down') {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+include ../components/navlink
+
+mixin navbar
+    nav.header__nav 
+        .container
+            .row.align-center
+                button.row.justify-flex-start 
+                    i(class="fa-solid fa-bars")
+                ul.row 
+                    +navLink('TRANG CHỦ')
+                    +navLink('GIỚI THIỆU')
+                    li.nav-link
+                        a SẢN PHẨM
+                        i(class="fa-solid fa-caret-down ml-1")
+                    li.nav-link
+                        a SẢN PHẨM MỚI
+                        i(class="fa-solid fa-caret-down ml-1")
+                    +navLink('TIN TỨC')
+                    +navLink('LIÊN HỆ')
+                .nav-right
+                    button.mr-1 
+                        i(class="fa-solid fa-magnifying-glass")
+                    button 
+                        i(class="fa-solid fa-basket-shopping")
