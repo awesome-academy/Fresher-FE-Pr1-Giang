@@ -1,0 +1,50 @@
+include ../components/media_icons
+include ../components/input
+include ../components/navlink
+
+mixin footer
+        footer 
+            .footer-top 
+                .container 
+                    .row.gap-3.mobile-flex-column
+                        .col-4-md.mobile-mb
+                            div(class="mobile-mb mobile-change-color") KÊNH THÔNG TIN TỪ CHÚNG TÔI:
+                            +mediaIcons(mediaIcons)
+                        .col-8-md
+                            .row.gap-3.mobile-flex-column
+                                .col-3-md 
+                                    div(class="mobile-mb mobile-change-color") ĐĂNG KÝ NHẬN EMAIL TỪ CHÚNG TÔI
+                                .col-9-md 
+                                    +emailInput()
+            .footer-mid.row.align-center 
+                .container 
+                    .row.gap-3.mobile-flex-column 
+                        .col-4-md.footer__logo 
+                            div.mb-2
+                                img(src="./assets/images/logo.png")
+                            p.mb-2 Green shop được thành lập từ 8/2010 được sự tin tưởng của khách hàng trong suốt thời gian hoạt động đến nay cửa hàng ngày một phát triển
+                            .row.align-center.mb-1 
+                                i(class="fa-solid fa-mobile-screen-button")
+                                span Điện thoại: (84-4)66.558.868
+                            .row.align-center  
+                                i(class="fa-solid fa-envelope")
+                                span Email: info@dkt.com.vn
+                        .col-8-md
+                            .row.mt-4.gap-3.mobile-flex-column 
+                                .col-3-md.mobile-mb 
+                                    +footerNav(customerInfo)
+                                .col-9-md.row.mobile-flex-column
+                                    .col-5-md.mobile-mb
+                                        +footerNav(serviceSupport)
+                                    .col-5-md.mobile-mb
+                                        +footerNav(policies)
+                                    .col-2-md.mobile-mb
+                                        +footerNav(newsNav)
+            .footer-bottom.row.align-center.mobile-display-none 
+                .container 
+                    .row.justify-space-between 
+                        .col-6-md
+                            +footerBottomNav(footerBottomNav)
+                        .col-3-md
+                            .row.justify-flex-end
+                                +mediaIcons(paymentIcons)

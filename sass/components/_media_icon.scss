@@ -1,3 +1,9 @@
 .media__icons {
     width: 100px;
+
+    @include respond-to('smallphone-and-down') {
+        font-size: 25px;
+        color: $white-color;
+        width: 150px;
+    }
 }
