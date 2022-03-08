@@ -1,52 +1,21 @@
-$utilities: (
-    "padding": (
-        "prefix": "p"
-    ),
-    "padding-left": (
-        "prefix": "pl"
-    ),
-    "padding-right": (
-        "prefix": "pr"
-    ),
-    "padding-top": (
-        "prefix": "pt"
-    ),
-    "padding-bottom": (
-        "prefix": "pb"
-    ),
-    "margin": (
-        "prefix": "m"
-    ),
-    "margin-left": (
-        "prefix": "ml"
-    ),
-    "margin-right": (
-        "prefix": "mr"
-    ),
-    "margin-top": (
-        "prefix": "mt"
-    ),
-    "margin-bottom": (
-        "prefix": "mb"
-    ),
-);
+@include respond-to('smallphone-and-down') {
+    .mobile-flex-column {
+        flex-direction: column;
+    }
 
-$values: (
-    "0": 0,
-    "1": $spacing,
-    "2": $spacing * 2,
-    "3": $spacing * 3,
-    "4": $spacing * 4,
-    "5": $spacing * 5,
-);
+    .mobile-display-none {
+        display: none!important;
+    }
 
+    .mobile-mb {
+        margin-bottom: 10px;
+    }
 
-@each $property, $prefix in $utilities {
-    $prefix: map-get($prefix, "prefix");
-    
-    @each $key, $val in $values {
-        .#{$prefix}-#{$key} {
-            #{$property}: $val;
-        }
+    .mobile-mb-0 {
+        margin-bottom: 0px;
+    }
+
+    .mobile-change-color {
+        color: $primary-color;
     }
 }

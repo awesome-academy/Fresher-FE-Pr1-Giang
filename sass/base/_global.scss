@@ -7,24 +7,30 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif!important;
 }
 
 ul {
-    padding: 0;
+    padding-left: 0!important;
     list-style-type: none;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none!important;
     cursor: pointer;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
 button {
     cursor: pointer;
+}
+
+p {
+    margin: 0!important;
 }

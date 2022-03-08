@@ -1,0 +1,45 @@
+include ./rating
+
+mixin productLg(productItem)
+    .product-lg.mobile-mb.mb-4
+        a 
+            img(src=productItem.imgSrc)
+        .d-flex.justify-content-center.align-items-center 
+            .product__info.d-flex.flex-column 
+                p(class="mb-1")=productItem.title
+                .d-flex.justify-content-center.mb-1
+                    +starsRate(4)
+                .d-flex.justify-content-center.align-items-center 
+                    span(class="current-price me-1")=productItem.curPrice
+                    span(class="prev-price")=productItem.prevPrice
+
+mixin discountProducts(productList)
+    .discount-products
+        .row.mb-4.mobile-flex-column.mobile-mb-0
+            each val, index in productList 
+                .col-md-4
+                    +productLg(val)
+
+mixin productSm(productItem)
+    .d-flex.product-sm 
+        .col-md-5.m-2.img__container
+            a 
+                img(src=productItem.imgSrc)
+        .col-md-7.ms-2.d-flex.flex-column.justify-content-center
+            p(class="mb-1")=productItem.title
+            .d-flex.mb-1
+                +starsRate(4)
+            span(class="current-price")=productItem.curPrice
+                
+
+mixin bestSellingProducts(productList)
+    .d-flex.flex-column.bestproduct__container 
+        each val in productList 
+            .bestproduct__wrapper
+                +productSm(val)
+
+mixin newProducts(productList)
+    .row.mb-4.mobile-flex-column.mobile-mb-0
+        each val, index in productList 
+            .col-md-3
+                +productLg(val)

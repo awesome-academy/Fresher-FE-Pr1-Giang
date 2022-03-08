@@ -1,0 +1,48 @@
+extends ../base/layout
+include ../components/title
+include ../components/product 
+include ../components/news
+
+block main
+    .container 
+        div
+            .mt-3  
+                +title("Sản phẩm nổi bật")
+            .row.mt-4.mb-4.mobile-flex-column 
+                .col-md-6.mobile-mb
+                    +productLg(featuredProducts[0])
+                    .row
+                        .col-md-6 
+                            +productLg(featuredProducts[1])
+                        .col-md-6 
+                            +productLg(featuredProducts[2])
+                .col-md-6
+                    .row 
+                        .col-md-6 
+                            +productLg(featuredProducts[3])
+                        .col-md-6 
+                            +productLg(featuredProducts[4])
+                    +productLg(featuredProducts[5])
+        div 
+            .row.mb-4.mobile-flex-column 
+                .col-md-3.mobile-padding-0  
+                    .mt-3.mb-4  
+                        +title("Sản phẩm mua nhiều", false)
+                    +bestSellingProducts(bestSellingProducts)
+                .col-md-9
+                    .mt-3.mb-4  
+                        +title("Sản phẩm khuyến mại", true)
+                    +discountProducts(discountProducts)
+        img(class="mb-4" src="./assets/images/banner-11140x217.png")
+        div 
+            .mt-3  
+                +title("Sản phẩm mới", true)
+            .mt-4
+                +newProducts(newProducts)
+        div 
+            .mt-3  
+                +title("Tin tức")
+            +newsList(news)
+                each val in news 
+                    .col-md-4
+                        +news(val)

@@ -6,45 +6,45 @@ mixin footer
         footer 
             .footer-top 
                 .container 
-                    .row.gap-3.mobile-flex-column
-                        .col-4-md.mobile-mb
+                    .row.mobile-flex-column
+                        .col-md-4.mobile-mb
                             div(class="mobile-mb mobile-change-color") KÊNH THÔNG TIN TỪ CHÚNG TÔI:
                             +mediaIcons(mediaIcons)
-                        .col-8-md
-                            .row.gap-3.mobile-flex-column
-                                .col-3-md 
+                        .col-md-8
+                            .row.mobile-flex-column
+                                .col-md-3 
                                     div(class="mobile-mb mobile-change-color") ĐĂNG KÝ NHẬN EMAIL TỪ CHÚNG TÔI
-                                .col-9-md 
+                                .col-md-9 
                                     +emailInput()
-            .footer-mid.row.align-center 
+            .footer-mid.d-flex.align-items-center 
                 .container 
-                    .row.gap-3.mobile-flex-column 
-                        .col-4-md.footer__logo 
+                    .row.mobile-flex-column 
+                        .col-md-4.footer__logo 
                             div.mb-2
                                 img(src="./assets/images/logo.png")
                             p.mb-2 Green shop được thành lập từ 8/2010 được sự tin tưởng của khách hàng trong suốt thời gian hoạt động đến nay cửa hàng ngày một phát triển
-                            .row.align-center.mb-1 
+                            .d-flex.align-items-center.mb-1 
                                 i(class="fa-solid fa-mobile-screen-button")
                                 span Điện thoại: (84-4)66.558.868
-                            .row.align-center  
+                            .d-flex.align-items-center  
                                 i(class="fa-solid fa-envelope")
                                 span Email: info@dkt.com.vn
-                        .col-8-md
-                            .row.mt-4.gap-3.mobile-flex-column 
-                                .col-3-md.mobile-mb 
+                        .col-md-8
+                            .row.mt-4.mobile-flex-column 
+                                .col-md-3.mobile-mb 
                                     +footerNav(customerInfo)
-                                .col-9-md.row.mobile-flex-column
-                                    .col-5-md.mobile-mb
+                                .col-md-9.row.mobile-flex-column
+                                    .col-md-5.mobile-mb
                                         +footerNav(serviceSupport)
-                                    .col-5-md.mobile-mb
+                                    .col-md-5.mobile-mb
                                         +footerNav(policies)
-                                    .col-2-md.mobile-mb
+                                    .col-md-2.mobile-mb
                                         +footerNav(newsNav)
-            .footer-bottom.row.align-center.mobile-display-none 
+            .footer-bottom.d-md-flex.align-items-center.d-none.d-md-block
                 .container 
-                    .row.justify-space-between 
-                        .col-6-md
+                    .row.justify-content-between 
+                        .col-md-6
                             +footerBottomNav(footerBottomNav)
-                        .col-3-md
-                            .row.justify-flex-end
+                        .col-md-3
+                            .d-flex.justify-content-end
                                 +mediaIcons(paymentIcons)

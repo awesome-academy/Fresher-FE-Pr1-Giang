@@ -1,0 +1,25 @@
+.title__container {
+    padding: 10px 0 0px 0;
+    border-bottom: 2px solid $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+        background-color: transparent;
+        border: 1px solid $light-gray-color;
+        color: $light-gray-color;
+        padding: 5px;
+        border-radius: 50%;
+        font-size: $fs-sm;
+    }
+
+    span {
+        padding: 5px 0;
+        font-weight: bold;
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color;
+        position: relative;
+        top: 1px;
+    }
+}

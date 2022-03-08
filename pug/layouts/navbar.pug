@@ -3,17 +3,17 @@ include ../components/navlink
 mixin navbar
     nav.header__nav 
         .container
-            .row.align-center
+            .d-flex.align-items-center
                 button.row.justify-flex-start 
                     i(class="fa-solid fa-bars")
-                ul.row 
+                ul.d-flex.align-items-center.m-0 
                     +navLink('TRANG CHỦ')
                     +navLink('GIỚI THIỆU')
                     li.nav-link
-                        a SẢN PHẨM
+                        a.me-1 SẢN PHẨM
                         i(class="fa-solid fa-caret-down ml-1")
                     li.nav-link
-                        a SẢN PHẨM MỚI
+                        a.me-1 SẢN PHẨM MỚI
                         i(class="fa-solid fa-caret-down ml-1")
                     +navLink('TIN TỨC')
                     +navLink('LIÊN HỆ')

@@ -4,40 +4,39 @@ include ./navbar
 
 mixin header
     header
-        .header-top.align-center.row
+        .header-top.d-md-flex.align-items-center
             .container 
-                .row.justify-space-between
-                    .col-5-md
-                        .row.justify-space-between 
-                            .operating-time.col-9-md.row.align-center
-                                i(class="fa-solid fa-clock mr-1")
-                                p Open time: 8.00 -18.00 Monday - Sunday
+                .d-flex.justify-content-between
+                    .col-md-5
+                        .d-flex.justify-content-between 
+                            .d-flex.align-items-center
+                                i(class="fa-solid fa-clock me-2")
+                                p.m-0 Open time: 8.00 -18.00 Monday - Sunday
                             +mediaIcons(mediaIcons)
-                    .col-3-md
-                        .row.justify-flex-end 
-                            .row.align-center 
-                                i(class="fa-solid fa-user mr-1")
+                    .col-md-3
+                        .d-flex.justify-content-end 
+                            .d-flex.align-items-center 
+                                i(class="fa-solid fa-user me-1")
                                 span Đăng nhập 
-                            .row.align-center.ml-3 
-                                i(class="fa-solid fa-user-plus mr-1")
+                            .d-flex.align-items-center.ms-3 
+                                i(class="fa-solid fa-user-plus me-1")
                                 span Đăng ký 
         .container
-            .row.gap-2
-                .col-6-md
+            .row
+                .col-md-6
                     a 
                         img(src="../assets/images/logo.png")
-                .col-6-md.row.flex-column.justify-center.gap-1.header-right 
+                .col-md-6.d-md-flex.flex-column.justify-content-center.header-right 
+                    .d-flex.ms-2.mb-2
+                        .d-flex.align-items-center.support-number
+                            i(class="fa-solid fa-phone me-1")
+                            p.m-0 HỖ TRỢ: (04)6674 2332 - (04)3786 8904
                     .row
-                        .col-9-md
-                            .row.align-center.support-number.ml-2.mb-1 
-                                i(class="fa-solid fa-phone")
-                                p HỖ TRỢ: (04)6674 2332 - (04)3786 8904
-                    .row.gap-1 
-                        .col-9-md
+                        .col-md-9
                             +searchInput()
-                        .col-3-md.row.align-center.gap-1.cart.justify-flex-end
+                        .col-md-3.d-flex.align-items-center.cart.justify-content-end
                             span
-                                i(class="fa-solid fa-basket-shopping")
+                                i(class="fa-solid fa-basket-shopping me-2")
                             span 0 sản phẩm 
         +navbar
         a(href="") 
