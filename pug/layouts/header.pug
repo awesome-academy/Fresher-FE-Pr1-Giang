@@ -1,0 +1,46 @@
+include ../components/input
+include ../components/media_icons
+include ../variables/variables
+include ./navbar
+
+mixin header
+    header
+        .header-top.align-center.row
+            .container 
+                .row.justify-space-between
+                    .col-5-md
+                        .row.justify-space-between 
+                            .operating-time.col-9-md.row.align-center
+                                i(class="fa-solid fa-clock mr-1")
+                                p Open time: 8.00 -18.00 Monday - Sunday
+                            +mediaIcons(mediaIcons)
+                    .col-3-md
+                        .row.justify-flex-end 
+                            .row.align-center 
+                                i(class="fa-solid fa-user mr-1")
+                                span Đăng nhập 
+                            .row.align-center.ml-3 
+                                i(class="fa-solid fa-user-plus mr-1")
+                                span Đăng ký 
+        .container
+            .row.gap-2
+                .col-6-md
+                    a 
+                        img(src="../assets/images/logo.png")
+                .col-6-md.row.flex-column.justify-center.gap-1.header-right 
+                    .row
+                        .col-9-md
+                            .row.align-center.support-number.ml-2.mb-1 
+                                i(class="fa-solid fa-phone")
+                                p HỖ TRỢ: (04)6674 2332 - (04)3786 8904
+                    .row.gap-1 
+                        .col-9-md
+                            +searchInput()
+                        .col-3-md.row.align-center.gap-1.cart.justify-flex-end
+                            span
+                                i(class="fa-solid fa-basket-shopping")
+                            span 0 sản phẩm 
+        +navbar
+        a(href="") 
+            img(src="./assets/images/slide-1920x590.png")
+

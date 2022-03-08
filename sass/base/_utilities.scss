@@ -1,0 +1,52 @@
+$utilities: (
+    "padding": (
+        "prefix": "p"
+    ),
+    "padding-left": (
+        "prefix": "pl"
+    ),
+    "padding-right": (
+        "prefix": "pr"
+    ),
+    "padding-top": (
+        "prefix": "pt"
+    ),
+    "padding-bottom": (
+        "prefix": "pb"
+    ),
+    "margin": (
+        "prefix": "m"
+    ),
+    "margin-left": (
+        "prefix": "ml"
+    ),
+    "margin-right": (
+        "prefix": "mr"
+    ),
+    "margin-top": (
+        "prefix": "mt"
+    ),
+    "margin-bottom": (
+        "prefix": "mb"
+    ),
+);
+
+$values: (
+    "0": 0,
+    "1": $spacing,
+    "2": $spacing * 2,
+    "3": $spacing * 3,
+    "4": $spacing * 4,
+    "5": $spacing * 5,
+);
+
+
+@each $property, $prefix in $utilities {
+    $prefix: map-get($prefix, "prefix");
+    
+    @each $key, $val in $values {
+        .#{$prefix}-#{$key} {
+            #{$property}: $val;
+        }
+    }
+}

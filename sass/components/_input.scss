@@ -1,0 +1,26 @@
+.search__input {
+    width: 100%;
+
+    position: relative;
+
+    input {
+        width: 100%;
+        padding: 15px 15px;
+        border: 0;
+        border-radius: 30px;
+        outline: none;
+    }
+
+    button {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        color: $gray-color;
+        border-left: 1px solid $gray-color;
+        padding: 3px 10px;
+    }
+}
