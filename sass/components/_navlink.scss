@@ -2,3 +2,22 @@
     padding: 12px 20px;
     color: $white-color;
 }
+
+.footer-nav  {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+        color: $primary-color;
+        height: 42px;
+
+        @include respond-to('smallphone-and-down') {
+            margin-bottom: 0px;
+        }
+    }
+
+    i {
+        margin-right: 3px;
+        font-size: $fs-sm;
+    }
+}

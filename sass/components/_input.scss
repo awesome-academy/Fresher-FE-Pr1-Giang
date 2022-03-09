@@ -24,3 +24,20 @@
         padding: 3px 10px;
     }
 }
+
+.email__input {
+    display: flex;
+
+    input {
+        width: 100%;
+        padding: 10px 0;
+        border: none;
+    }
+
+    button {
+        color: $white-color;
+        width: 38px;
+        border: none;
+        background-color: $primary-color;
+    }
+}

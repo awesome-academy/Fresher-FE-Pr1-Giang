@@ -1,3 +1,18 @@
 mixin navLink(text)
     li.nav-link
         a=text
+
+mixin footerNav(data)
+    .footer-nav
+        h4(class="mb-3")=data.title
+        ul 
+            each val in data.subTitle
+                li.mb-2 
+                    a 
+                        i(class="fa-solid fa-angle-right")
+                        span=val
+
+mixin footerBottomNav(navList)
+    nav.footer-bottom__nav 
+        each val in navList
+            a(href="")=val
