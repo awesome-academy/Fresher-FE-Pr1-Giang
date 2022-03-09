@@ -2,9 +2,12 @@
 @import './base/global';
 @import './base/breakpoints';
 @import './base/utilities';
-@import './base/grid';
 @import './components/input';
 @import './components/media_icon';
 @import './layouts/header';
 @import './components/navlink';
 @import './layouts/footer';
+@import './components/title';
+@import './components/product';
+@import './components/news';
+@import './pages/home';

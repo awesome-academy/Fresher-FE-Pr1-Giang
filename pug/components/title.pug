@@ -1,0 +1,9 @@
+mixin title(text, condition)
+    h3.title__container.mb-1 
+        span=text
+        .title__buttons 
+            if condition 
+                button 
+                    i(class="fa-solid fa-angle-left")
+                button 
+                    i(class="fa-solid fa-angle-right")

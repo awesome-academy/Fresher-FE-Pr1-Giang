@@ -1,13 +1,21 @@
 include ../layouts/header
 include ../layouts/footer
-include ../variables/variables
+include ../variables/icons
+include ../variables/products
+include ../variables/navlinks
+include ../variables/news
 
 html 
     head 
         link(rel="stylesheet", href="/css/style.css")
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous")
         meta(name="viewport" content="width=device-width,initial-scale=1")
         script(src="https://kit.fontawesome.com/efdf8a4608.js" crossorigin="anonymous")
         title Green shop
-    body 
-        +header
-        +footer
+    body
+        block header
+            +header
+        block main 
+            h1 This is the main part
+        block footer
+            +footer

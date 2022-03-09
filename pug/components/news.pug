@@ -1,0 +1,12 @@
+mixin news(news)
+    .news.mobile-mb 
+        a 
+            img(src=news.imgSrc)
+        p(class="news__date")=news.date
+        p(class="news__title")=news.title
+        p(class="news__info")=news.subContent
+        span Đọc tiếp
+
+mixin newsList(list)
+    .row.mt-4.mb-5.mobile-flex-column
+        block

@@ -39,8 +39,8 @@ footer {
         height: 60px;
 
         a {
-            color: $light-gray-color;
-            font-size: $fs-md;
+            color: $light-gray-color!important;
+            font-size: $fs-md!important;
         }
 
         .footer-bottom__nav  {

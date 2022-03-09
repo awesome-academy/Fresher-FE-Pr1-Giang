@@ -20,7 +20,6 @@ header {
     }
 
     .cart {
-        width: 200px;
         i {
             font-size: 20px;
         }
@@ -33,10 +32,6 @@ header {
     .support-number  {
         color: $gray-color;
 
-        i {
-            margin-right: 5px;
-        }
-
         p {
             font-size: $fs-md;
         }
@@ -45,6 +40,14 @@ header {
 
 .header__nav {
     background-color: $primary-color;
+
+    a {
+        color: $white-color!important;
+    }
+
+    i {
+        color: $white-color!important;
+    }
 
     button {
         border: none;
