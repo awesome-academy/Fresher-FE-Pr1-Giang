@@ -1,0 +1,11 @@
+mixin breadCrumb(items, last)
+    .d-flex.align-items-center.breadcrumb
+        ul.breadcrumb__list 
+            each item in items 
+                li.breadcrumb__item 
+                    if (items.length === 1)
+                        span(class="breadcrumb__link")=item 
+                    else 
+                        a(href="#" class="breadcrumb__link")=item
+            if (last)
+                span(class="breadcrumb__link--active")=last 

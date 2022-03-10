@@ -23,3 +23,23 @@
         top: 1px;
     }
 }
+
+.filter-heading {
+    @include flex(row, center, space-between);
+    height: 90px;
+
+    i {
+        color: $gray-color;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    select {
+        border: 1px solid $light-gray-color;
+        background-color: transparent;
+        padding: 10px 5px;
+        outline: none;
+        color: $gray-color;
+        font-size: $fs-md;
+    }
+}

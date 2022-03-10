@@ -13,13 +13,6 @@ mixin productLg(productItem)
                     span(class="current-price me-1")=productItem.curPrice
                     span(class="prev-price")=productItem.prevPrice
 
-mixin discountProducts(productList)
-    .discount-products
-        .row.mb-4.mobile-flex-column.mobile-mb-0
-            each val, index in productList 
-                .col-md-4
-                    +productLg(val)
-
 mixin productSm(productItem)
     .d-flex.product-sm 
         .col-md-5.m-2.img__container
@@ -38,8 +31,6 @@ mixin bestSellingProducts(productList)
             .bestproduct__wrapper
                 +productSm(val)
 
-mixin newProducts(productList)
+mixin productList(productList)        
     .row.mb-4.mobile-flex-column.mobile-mb-0
-        each val, index in productList 
-            .col-md-3
-                +productLg(val)
+        block

@@ -1,0 +1,23 @@
+.page-navigation {
+    @include flex(row, center, flex-end);
+    margin-bottom: 80px;
+
+    button.active {
+        background-color: $primary-color;
+        color: $white-color;
+    }
+
+    button {
+        background-color: transparent;
+        margin-left: 10px;
+        width: 50px;
+        height: 50px;
+        font-size: $fs-md;
+        color: $gray-color;
+        border: 1px solid $secondary-color;
+    }
+
+    button:last-child, button:first-child {
+        width: 110px;
+    }
+}
