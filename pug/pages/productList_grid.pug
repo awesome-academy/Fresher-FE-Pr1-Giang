@@ -1,0 +1,7 @@
+extends ../base/productList_base
+
+block productList
+    +productList([...featuredProducts, ...discountProducts])
+        each val, index in [...featuredProducts, ...discountProducts] 
+            .col-md-4
+                +productLg(val)

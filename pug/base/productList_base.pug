@@ -1,0 +1,25 @@
+extends ./layout
+include ../components/title
+include ../components/product
+include ../components/pagination
+include ../components/breadcrumb
+
+block main
+    .container
+        +breadCrumb(["Home"], "Danh sách sản phẩm")
+        .row
+            .col-md-3 
+                +title("Danh mục sản phẩm", false)
+                .sidebar__navlink.mt-3 
+                    +navList(productCategory)
+                +title("Tìm theo giá", false)
+                .sidebar__navlink.mt-3 
+                    +navList(prices)
+                +title("Tìm theo màu", false)
+                .sidebar__navlink.mt-3 
+                    +colorsList(colors)
+            .col-md-9
+                img(class="mt-3" src="./assets/images/bannerproductlist.png")
+                +filterHeading()
+                block productList
+                +pagination([1,2,3,4])

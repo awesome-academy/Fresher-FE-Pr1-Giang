@@ -1,0 +1,26 @@
+.breadcrumb {
+  font-size: $fs-sm;
+  margin: 10px 0 25px 0;
+
+  &__list {
+      @include flex(row, center, flex-start);
+  }
+
+  &__item {
+      margin-right: 5px;
+  }
+
+  &__link {
+      cursor: pointer;
+      color: $gray-color;
+  }
+
+  &__link::after {
+      content: " /";
+  }
+
+  &__link--active {
+      color: $primary-color;
+      cursor: pointer;
+  }
+}

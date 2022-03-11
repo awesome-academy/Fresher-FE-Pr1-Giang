@@ -21,3 +21,29 @@
         font-size: $fs-sm;
     }
 }
+
+.sidebar__navlink {
+    font-size: $fs-md;
+    color: $gray-color;
+
+    i {
+        margin-right: 5px;
+    }
+
+    li {
+        margin: 0!important;
+        padding: 8px 0;
+        border-bottom: 1px solid $secondary-color;
+    }
+}
+
+.color__dot {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    div {
+        @include box(30px, 30px, 50%);
+        margin-right: 10px;
+    }
+}

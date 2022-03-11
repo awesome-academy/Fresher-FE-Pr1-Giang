@@ -4,6 +4,8 @@ include ../components/product
 include ../components/news
 
 block main
+    a(href="") 
+            img(src="./assets/images/slide-1920x590.png")
     .container 
         div
             .mt-3  
@@ -32,13 +34,19 @@ block main
                 .col-md-9
                     .mt-3.mb-4  
                         +title("Sản phẩm khuyến mại", true)
-                    +discountProducts(discountProducts)
+                    +productList(discountProducts)
+                        each val, index in discountProducts 
+                            .col-md-4
+                                +productLg(val)
         img(class="mb-4" src="./assets/images/banner-11140x217.png")
         div 
             .mt-3  
                 +title("Sản phẩm mới", true)
             .mt-4
-                +newProducts(newProducts)
+                +productList(newProducts)
+                    each val, index in newProducts 
+                        .col-md-3
+                            +productLg(val)
         div 
             .mt-3  
                 +title("Tin tức")
