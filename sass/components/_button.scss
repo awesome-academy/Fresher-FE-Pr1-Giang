@@ -1,0 +1,27 @@
+.btn-order {
+  padding: 10px 35px;
+  border: 1px solid $primary-color;
+  border-radius: 30px;
+  background-color: $primary-color;
+  color: $white-color;
+  transition: ease-out 0.5s;
+
+  &:hover {
+    color: $primary-color;
+    background-color: $white-color;
+  }
+}
+
+.btn-rounded {
+  padding: 14px 14px;
+  border-radius: 50%;
+  border: 1px solid $light-gray-color;
+  color: $black-color;
+  background-color: transparent;
+  transition: ease-out 0.5s;
+
+  &:hover {
+    background-color: $light-gray-color;
+    color: $white-color;
+  }
+}

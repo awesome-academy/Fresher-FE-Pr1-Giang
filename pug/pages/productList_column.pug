@@ -1,0 +1,7 @@
+extends ../base/productList_base
+
+block productList 
+    +productListColumn(featuredProducts)
+        each val in featuredProducts
+          .col-md-12
+            +productRow(val)

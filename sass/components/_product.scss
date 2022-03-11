@@ -74,6 +74,50 @@
     }
 }
 
+.product-row {
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+  padding: 0!important;
+
+  &__wrapper {
+    @include flex(row, center, flex-start);
+    height: 100%;
+
+    @include respond-to(smallphone-and-down) {
+      height: 300px
+    }
+  }
+
+  &__title {
+    font-size: $fs-xl;
+  }
+
+  &__desc {
+    font-size: $fs-md;
+  }
+
+  &__price {
+    color: $red-color;
+  }
+
+  &__info {
+    height: 80%;
+    padding: 0 35px;
+    @include flex(column, flex-start, space-between);
+
+    @include respond-to(smallphone-and-down) {
+      align-items: center
+    }
+  }
+
+  .btn__wrapper {
+    @include flex(row, center, flex-start);
+
+    & > * {
+      margin-right: 12px;
+    }
+  }
+}
+
 @include respond-to('smallphone-and-down') {
     .mobile-padding-0 {
         padding: 0px;

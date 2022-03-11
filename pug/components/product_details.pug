@@ -1,0 +1,52 @@
+include ./rating
+include ./button
+
+mixin productDetailsImg(product)
+  .details-img
+    .details-img__main 
+      img(src=product.imgSrc)
+    .details-img__sub
+      img(src=product.imgSrc)
+      img(src=product.imgSrc)
+      img(src=product.imgSrc)
+      img(src=product.imgSrc)
+      img(src=product.imgSrc)
+
+mixin productDetailsContent(product)
+  .details-content
+    .details-content__wrapper
+      .details-content__top
+        p=product.title
+        .d-flex
+            +starsRate(4)
+        .d-flex.align-items-center
+            span(class="details-content__price")=product.curPrice
+            span(class="details-content__discount")=product.prevPrice
+      .details-content__desc
+        p=product.desc
+      .details-content__quantity
+        p Số lượng 
+        .quantity-btns
+          button(class="btn-decrease") -
+          span 1
+          button(class="btn-decrease") +
+      .btn__wrapper
+          +orderBtn
+          +roundedBtn("fa-solid fa-magnifying-glass")
+          +roundedBtn("fa-solid fa-heart") 
+
+mixin detailsTabs(product)
+  .details-tabs__container
+    .details-tabs.d-flex
+      .col-md-4.col-12
+        p.active THÔNG TIN SẢN PHẨM
+      .col-md-4.mobile-display-none
+        p KHÁCH HÀNG ĐÁNH GIÁ 
+      .col-md-4.mobile-display-none
+        p THẺ TAG
+    .details-info 
+      p= `Tên phổ thông: ${product.title}`
+      p= `Tên khoa học: ${product.academicName}`
+      p= `Họ thực vật: ${product.species}`
+      p= `Chiều cao: ${product.height}`
+      p= `${product.descDetail}`
