@@ -1,0 +1,22 @@
+extends ../base/layout
+include ../components/breadcrumb
+include ../components/product_details
+include ../components/product
+include ../components/title
+
+block main 
+  .container
+    +breadCrumb(["Home"], featuredProducts[0].title)
+    .row.mb-4 
+      .col-md-5.mb-2 
+        +productDetailsImg(featuredProducts[0])
+      .col-md-7.mb-2
+        +productDetailsContent(featuredProducts[0])
+    +detailsTabs(featuredProducts[0])
+    .mb-4
+      +title("Sản phẩm liên quan", true)
+    +productList(discountProducts)
+      each item, index in discountProducts
+        if (index < 4)
+          .col-md-3 
+            +productLg(item)

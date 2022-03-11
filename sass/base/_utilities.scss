@@ -20,10 +20,6 @@
     }
 }
 
-.active {
-    color: $primary-color!important;
-}
-
 @mixin box($width, $height: $width, $border-radius: 0) {
     width: $width;
     height: $height;
