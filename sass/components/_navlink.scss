@@ -47,3 +47,24 @@
         margin-right: 10px;
     }
 }
+
+.blog-tag {
+  @include flex(row, center, flex-start);
+  flex-wrap: wrap;
+
+  button {
+    background-color: transparent;
+    font-size: $fs-md;
+    color: $gray-color;
+    border: 1px solid $secondary-color;
+    transition: ease-in-out 0.5s;
+    height: 40px;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+}

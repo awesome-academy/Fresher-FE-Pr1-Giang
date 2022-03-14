@@ -28,3 +28,8 @@ mixin colorsList(list)
                 .color__dot
                     div(style=`background-color: ${val}`)
                     span=val
+
+mixin blogTag(tagList)
+  .blog-tag.mt-3.mb-3 
+    each tag in tagList 
+      button(type="button")=tag

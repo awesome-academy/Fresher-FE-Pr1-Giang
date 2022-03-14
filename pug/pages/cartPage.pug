@@ -1,0 +1,17 @@
+extends ../base/layout
+include ../components/breadcrumb
+include ../components/title
+include ../components/cart
+include ../components/button
+
+block main 
+  .container 
+    +breadCrumb(["Home"], "Giỏ hàng")
+    +nolineTitle("giỏ hàng")
+    +cartTable(cartItems) 
+    .cart-btn__container
+      +orderBtn("HỦY ĐƠN HÀNG")
+      +orderBtn("TIẾP TỤC MUA")
+    +cartPayment(cartItems)
+    .cart-btn__container
+      +orderBtn("THANH TOÁN")

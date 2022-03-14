@@ -1,6 +1,6 @@
 extends ../base/productList_base
 
-block productList
+block mainSection
     +productList([...featuredProducts, ...discountProducts])
         each val, index in [...featuredProducts, ...discountProducts] 
             .col-md-4

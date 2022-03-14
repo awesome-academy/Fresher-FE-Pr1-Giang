@@ -1,0 +1,26 @@
+extends ../base/layout
+include ../components/news
+include ../components/breadcrumb
+include ../components/title
+include ../components/pagination
+
+block main
+  .container 
+    +breadCrumb(["News"], "Tin tức")
+    .row 
+      .col-md-3 
+        +title("Danh mục sản phẩm", false)
+        .sidebar__navlink.mt-3 
+            +navList(productCategory)
+        +title("Tin tức nổi bật", false)
+        .features-news__container.mt-3.mb-3 
+          each news in featuredNews
+            +featuredNews(news)
+        +title("Blog tag", false)
+        +blogTag(blogTag)
+      .col-md-9
+        .news-lg__container.mt-3 
+          each news, index in featuredNews 
+            if (index < 3)
+              +newsLg(news)
+        +pagination([1,2,3,4])

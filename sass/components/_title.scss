@@ -43,3 +43,10 @@
         font-size: $fs-md;
     }
 }
+
+.title-noline {
+  font-weight: bold;
+  color: $primary-color;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
