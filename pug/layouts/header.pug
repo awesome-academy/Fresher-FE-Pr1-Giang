@@ -7,26 +7,26 @@ mixin header
         .header-top.d-md-flex.align-items-center
             .container 
                 .d-flex.justify-content-between
-                    .col-md-5
+                    .col-md-8.col-lg-5
                         .d-flex.justify-content-between 
                             .d-flex.align-items-center
                                 i(class="fa-solid fa-clock me-2")
                                 p.m-0 Open time: 8.00 -18.00 Monday - Sunday
                             +mediaIcons(mediaIcons)
-                    .col-md-3
+                    .col-md-3.d-sm-flex.justify-content-sm-end
                         .d-flex.justify-content-end 
                             .d-flex.align-items-center 
                                 i(class="fa-solid fa-user me-1")
-                                span Đăng nhập 
+                                span(class="tablet-display-none") Đăng nhập 
                             .d-flex.align-items-center.ms-3 
                                 i(class="fa-solid fa-user-plus me-1")
-                                span Đăng ký 
+                                span(class="tablet-display-none") Đăng ký 
         .container
             .row
-                .col-md-6
+                .col-lg-6.col-md-12
                     a 
                         img(src="../assets/images/logo.png")
-                .col-md-6.d-md-flex.flex-column.justify-content-center.header-right 
+                .col-md-6.d-lg-flex.flex-column.justify-content-center.header-right 
                     .d-flex.ms-2.mb-2
                         .d-flex.align-items-center.support-number
                             i(class="fa-solid fa-phone me-1")

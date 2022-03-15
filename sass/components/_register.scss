@@ -1,3 +1,8 @@
+.title-important::after {
+  content: " *";
+  color: $red-color;
+}
+
 .register-form {
   @include flex(row, center, flex-start);
   flex-wrap: wrap;
@@ -5,11 +10,6 @@
 
   & > * {
     width: 46%;
-  }
-
-  .title-important::after {
-    content: " *";
-    color: $red-color;
   }
 
   span {
@@ -20,6 +20,10 @@
 
 .register-btn__container {
   margin: 30px 0;
+
+  @include respond-to(tablet-and-down) {
+    @include flex(row, flex-start, center);
+  }
 
   @include respond-to(smallphone-and-down) {
     @include flex(column, flex-start, flex-start);

@@ -21,6 +21,10 @@
           background-color: $primary-color;
           color: $white-color;
         }
+
+       &:nth-child(1) {
+         margin-left: 0;
+       }
     }
 
     button:last-child, button:first-child {

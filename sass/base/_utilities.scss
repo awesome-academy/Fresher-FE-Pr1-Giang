@@ -20,6 +20,12 @@
     }
 }
 
+@include respond-to("tablet-and-down") {
+  .tablet-display-none {
+    display: none!important;
+  }
+}
+
 @mixin box($width, $height: $width, $border-radius: 0) {
     width: $width;
     height: $height;

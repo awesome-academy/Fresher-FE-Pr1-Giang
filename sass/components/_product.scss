@@ -5,6 +5,101 @@
     display: flex;
     flex-direction: column;
 
+    &__img {
+      position: relative;
+
+      .badge-green {
+        @include flex(row, center, center);
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        border: 1px solid $primary-color;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background-color: $primary-color;
+        color: $white-color;
+
+        @include respond-to(tablet-and-down) {
+          top: 5px;
+          left: 5px;
+          width: 3rem;
+          height: 3rem;
+        }
+
+        @include respond-to(smallphone-and-down) {
+          top: 5px;
+          left: 5px;
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+
+      .badge-red {
+        @include flex(row, center, center);
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        border: 1px solid $red-color;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background-color: $red-color;
+        color: $white-color;
+
+        @include respond-to(tablet-and-down) {
+          top: 5px;
+          left: 5px;
+          width: 3rem;
+          height: 3rem;
+        }
+
+        @include respond-to(smallphone-and-down) {
+          top: 5px;
+          left: 5px;
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+
+      .product-hover {
+        @include flex(row, center, space-between);
+        width: 220px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        display: none;
+        z-index: 9;
+        transition: 0.5s;
+
+        .btn-rounded {
+          background-color: $white-color;
+          border: none;
+
+          &:hover {
+            color: $black-color;
+            opacity: 0.6;
+          }
+        }
+      }
+
+      &:hover::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.3);
+      }
+
+      &:hover .product-hover {
+        display: block;
+      }
+    }
+
     .product__info {
         height: 120px;
         justify-content: center;
@@ -36,31 +131,85 @@
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
     padding: 3px 0;
 
+    @include respond-to('tablet-and-down') {
+      height: 200px;
+      padding: 0px;
+    }
+
     @include respond-to('smallphone-and-down') {
         height: 150px;
     }
 
     .img__container {
         overflow: hidden;
+        position: relative;
+
+        &:hover::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.3);
+        }
 
         @include respond-to('smallphone-and-down') {
             width: 160px;
             height: 140px;
             margin: 0px;
         }
+
+        .product-hover {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          z-index: 8;
+          display: none;
+          
+          button {
+            background-color: $white-color;
+            border: 1px solid $white-color;
+            
+            &:hover {
+              color: $black-color;
+              opacity: 0.6;
+            }
+            
+            i {
+              color: $black-color!important;
+            }
+          }
+        }
+
+        &:hover .product-hover {
+          display: block;
+        }
     }
 
     img {
         transform: scale(1.5);
 
+        @include respond-to('tablet-and-down') {
+          transform: scale(1);
+          height: 190px;
+        }
+
         @include respond-to('smallphone-and-down') {
             transform: scale(0.8);
+            height: auto;
         }
     }
 
     p {
         font-size: $fs-sm;
         color: $black-color;
+
+        @include respond-to('tablet-and-down') {
+          font-size: $fs-md;
+        }
     }
 
     i {
@@ -71,6 +220,10 @@
     .current-price {
         color: $red-color;
         font-size: $fs-md;
+
+        @include respond-to('tablet-and-down') {
+          font-size: $fs-lg;
+        }
     }
 }
 
@@ -112,9 +265,19 @@
   .btn__wrapper {
     @include flex(row, center, flex-start);
 
+    & > .btn-order {
+      padding: 10px 20px;
+    }
+    
     & > * {
       margin-right: 12px;
     }
+  }
+}
+
+.product-list {
+  @include respond-to(smallphone-and-down) {
+    
   }
 }
 

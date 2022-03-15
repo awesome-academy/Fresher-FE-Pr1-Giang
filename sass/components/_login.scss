@@ -2,6 +2,11 @@
   margin-right: 50px;
   margin-bottom: 30px;
 
+  @include respond-to(tablet-and-down) {
+    width: 100%;
+    margin-right: 0;
+  }
+
   @include respond-to(smallphone-and-down) {
     width: 100%;
     margin-right: 0;

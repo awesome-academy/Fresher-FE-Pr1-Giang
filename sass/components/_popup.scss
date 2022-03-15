@@ -1,0 +1,84 @@
+.pop-up {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &__wrapper {
+    width: 50%;
+    aspect-ratio: 4/2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $popup-color;
+
+    @include respond-to(tablet-and-down) {
+      aspect-ratio: 3/5;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      width: 90%;
+    }
+  }
+
+  &__inner-wrapper {
+    @include flex(row, center, flex-start);
+    height: 100%;
+
+    .close-btn {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      color: $primary-color!important;
+      border: none;
+      background-color: transparent;
+      font-size: 26px;
+    }
+
+    @include respond-to(tablet-and-down) {
+      flex-direction: column
+    }
+  }
+
+  &__container {
+    @include flex(row, center, center);
+    padding: 0 20px;
+    position: relative;
+    height: 100%;
+  }
+
+  &__email {
+    height: 70%;
+    @include flex(column, flex-start, space-evenly);
+
+    img {
+      width: 65%;
+    }
+
+    h3 {
+      color: $primary-color;
+    }
+
+    .email__input {
+      width: 90%;
+
+      @include respond-to(tablet-and-down) {
+        width: 100%;
+      }
+      
+      button {
+        width: 10%;
+      }
+    }
+
+    p {
+      font-size: $fs-md;
+      color: $gray-color;
+
+      @include respond-to(tablet-and-down) {
+        padding: 20px 0;
+      }
+    }
+  }
+}

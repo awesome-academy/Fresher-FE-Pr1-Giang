@@ -5,7 +5,7 @@ mixin cartTable(itemList)
       th Tên sản phẩm
       th Đơn giá
       th Số lượng
-      th Thành tiền
+      th.mobile-display-none Thành tiền
       th Xóa
     each item in itemList 
       +cartItem(item)
@@ -24,7 +24,7 @@ mixin cartItem(item)
       .cart-table__quantity  
         div
           span=item.amount
-    td=`${convertMoney(item.curPrice * item.amount)}`
+    td(class="mobile-display-none")=`${convertMoney(item.curPrice * item.amount)}`
     td 
       button 
         i(class="fa-solid fa-trash-can")
