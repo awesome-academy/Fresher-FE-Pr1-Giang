@@ -1,6 +1,11 @@
 .nav-link {
     padding: 15px 20px!important;
     color: $white-color;
+
+    &:hover {
+      background-color: rgb(29, 223, 116);
+      cursor: pointer;
+    }
 }
 
 .footer-nav  {

@@ -7,8 +7,7 @@ mixin cartTable(itemList)
       th Số lượng
       th.mobile-display-none Thành tiền
       th Xóa
-    each item in itemList 
-      +cartItem(item)
+    tbody(id="cart-items")
       
 mixin cartItem(item)
   -
@@ -36,12 +35,3 @@ mixin cartPayment(itemList)
     }
   .cart-payment__container 
     table.cart-payment 
-      tr 
-        td tổng tiền (chưa thuế)
-        td=`${convertMoney(taxExcluded)}`
-      tr 
-        td thuế (vat 10%)
-        td=`${convertMoney(tax)}`
-      tr 
-        th tổng phải thanh toán 
-        th=`${convertMoney(total)}`

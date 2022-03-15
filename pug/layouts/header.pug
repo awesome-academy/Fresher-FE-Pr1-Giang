@@ -15,10 +15,12 @@ mixin header
                             +mediaIcons(mediaIcons)
                     .col-md-3.d-sm-flex.justify-content-sm-end
                         .d-flex.justify-content-end 
-                            .d-flex.align-items-center 
+                            .d-flex.align-items-center
+                              a(href="./login.html") 
                                 i(class="fa-solid fa-user me-1")
                                 span(class="tablet-display-none") Đăng nhập 
                             .d-flex.align-items-center.ms-3 
+                              a(href="./register.html")
                                 i(class="fa-solid fa-user-plus me-1")
                                 span(class="tablet-display-none") Đăng ký 
         .container
@@ -35,7 +37,10 @@ mixin header
                         .col-md-9
                             +searchInput()
                         .col-md-3.d-flex.align-items-center.cart.justify-content-end
-                            span
-                                i(class="fa-solid fa-basket-shopping me-2")
-                            span 0 sản phẩm 
+                            a(class="basket" href="./cartPage.html") 
+                              span
+                                  i(class="fa-solid fa-basket-shopping me-2")
+                            span 
+                              span(id="cart-number") 0
+                              span  sản phẩm 
         +navbar

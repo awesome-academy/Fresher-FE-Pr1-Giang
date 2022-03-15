@@ -1,0 +1,334 @@
+{
+  "products": [
+    {
+      "imgSrc": "../assets/images/spx2-4.png",
+      "title": "Cây chân chim",
+      "prevPrice": 250000,
+      "curPrice": 250000,
+      "desc": "Cây Ngọc Ngân là loại cây dành cho tình yêu! đây là món quà bất ngờ để bạn tặng 'người ấy'. Ngọc Ngân (Valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.",
+      "descDetail": "Cây dạ lam có nguồn gốc từ Brazil, được du nhập và phân bố rông khắp ở Việt Nam. Cây dạ lam chủ yếu trồng làm cảnh bằng lá. Có thể trồng thành bụi dày ở chậu hay trồng dọc theo lối đi, viền các bờ cỏ, nơi công viên, vườn hoa. Cây còn có thể chịu bóng một phần, nên làm cây trang trí trong văn phòng và nột thất trong nhà.Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.",
+      "regularName": "Dạ lam, Huỳnh tinh cảnh, Dong vằn.",
+      "academicName": "Calathea zebrina.",
+      "species": "Marantaceae (củ dong).",
+      "height": "0,8 - 1,2m",
+      "status": -50,
+      "id": 1,
+      "type": "featured"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-11.png",
+      "title": "Cây cọ ta",
+      "prevPrice": 250000,
+      "curPrice": 150000,
+      "desc": "Cây Ngọc Ngân là loại cây dành cho tình yêu! đây là món quà bất ngờ để bạn tặng 'người ấy'. Ngọc Ngân (Valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.",
+      "status": "NEW",
+      "id": 2,
+      "type": "featured"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-6.png",
+      "title": "Cây dứa nhỏ",
+      "prevPrice": 250000,
+      "curPrice": 375000,
+      "desc": "Cây Ngọc Ngân là loại cây dành cho tình yêu! đây là món quà bất ngờ để bạn tặng 'người ấy'. Ngọc Ngân (Valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.",
+      "status": -30,
+      "id": 3,
+      "type": "featured"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-5.png",
+      "title": "Cây Dạ Lam",
+      "prevPrice": 250000,
+      "curPrice": 500000,
+      "desc": "Cây Ngọc Ngân là loại cây dành cho tình yêu! đây là món quà bất ngờ để bạn tặng 'người ấy'. Ngọc Ngân (Valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.",
+      "status": "NEW",
+      "id": 4,
+      "type": "featured"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-7.png",
+      "title": "Cây Danh Dự",
+      "prevPrice": 250000,
+      "curPrice": 850000,
+      "desc": "Cây Ngọc Ngân là loại cây dành cho tình yêu! đây là món quà bất ngờ để bạn tặng 'người ấy'. Ngọc Ngân (Valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.",
+      "status": -15,
+      "id": 5,
+      "type": "featured"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-3.png",
+      "title": "Cây Đa Búp Đỏ",
+      "prevPrice": 250000,
+      "curPrice": 1000000,
+      "desc": "Cây Ngọc Ngân là loại cây dành cho tình yêu! đây là món quà bất ngờ để bạn tặng 'người ấy'. Ngọc Ngân (Valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.",
+      "status": "NEW",
+      "id": 6,
+      "type": "featured"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-7.png",
+      "title": "Cây Danh Dự",
+      "prevPrice": 250000,
+      "curPrice": 475000,
+      "id": 7,
+      "type": "discount"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-10.png",
+      "title": "Cây Dứa Nhỏ",
+      "prevPrice": 250000,
+      "curPrice": 668000,
+      "id": 8,
+      "type": "discount"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-9.png",
+      "title": "Cây Cọ Ta",
+      "prevPrice": 250000,
+      "curPrice": 770000,
+      "id": 9,
+      "type": "discount"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-5.png",
+      "title": "Cây Dạ Lam",
+      "prevPrice": 250000,
+      "curPrice": 550000,
+      "id": 10,
+      "type": "discount"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-1.png",
+      "title": "Cây Danh Dự",
+      "prevPrice": 250000,
+      "curPrice": 780000,
+      "id": 11,
+      "type": "discount"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-3.png",
+      "title": "Cây Dứa nhỏ",
+      "prevPrice": 250000,
+      "curPrice": 680000,
+      "id": 12,
+      "type": "discount"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-4.png",
+      "title": "Cây chân chim",
+      "prevPrice": 250000,
+      "curPrice": 250000,
+      "id": 13,
+      "type": "bestSelling"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-11.png",
+      "title": "Cây cọ ta",
+      "prevPrice": 250000,
+      "curPrice": 150000,
+      "id": 14,
+      "type": "bestSelling"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-6.png",
+      "title": "Cây dứa nhỏ",
+      "prevPrice": 250000,
+      "curPrice": 375000,
+      "id": 15,
+      "type": "bestSelling"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-5.png",
+      "title": "Cây Dạ Lam",
+      "prevPrice": 250000,
+      "curPrice": 500000,
+      "id": 16,
+      "type": "bestSelling"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-7.png",
+      "title": "Cây Danh Dự",
+      "prevPrice": 250000,
+      "curPrice": 850000,
+      "id": 17,
+      "type": "bestSelling"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-3.png",
+      "title": "Cây Đa Búp Đỏ",
+      "prevPrice": 250000,
+      "curPrice": 1000000,
+      "id": 18,
+      "type": "bestSelling"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-4.png",
+      "title": "Cây chân chim",
+      "prevPrice": 250000,
+      "curPrice": 250000,
+      "id": 19,
+      "type": "new"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-11.png",
+      "title": "Cây cọ ta",
+      "prevPrice": 250000,
+      "curPrice": 150000,
+      "id": 20,
+      "type": "new"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-6.png",
+      "title": "Cây dứa nhỏ",
+      "prevPrice": 250000,
+      "curPrice": 375000,
+      "id": 21,
+      "type": "new"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-5.png",
+      "title": "Cây Dạ Lam",
+      "prevPrice": 250000,
+      "curPrice": 500000,
+      "id": 22,
+      "type": "new"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-7.png",
+      "title": "Cây Danh Dự",
+      "prevPrice": 250000,
+      "curPrice": 850000,
+      "id": 23,
+      "type": "new"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-3.png",
+      "title": "Cây Đa Búp Đỏ",
+      "prevPrice": 250000,
+      "curPrice": 1000000,
+      "id": 24,
+      "type": "new"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-1.png",
+      "title": "Cây Danh Dự",
+      "prevPrice": 250000,
+      "curPrice": 780000,
+      "id": 25,
+      "type": "new"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-3.png",
+      "title": "Cây Dứa nhỏ",
+      "prevPrice": 250000,
+      "curPrice": 680000,
+      "id": 26,
+      "type": "new"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-7.png",
+      "title": "Cây Danh Dự",
+      "prevPrice": 250000,
+      "curPrice": 475000,
+      "id": 27,
+      "type": "regular"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-10.png",
+      "title": "Cây Dứa Nhỏ",
+      "prevPrice": 250000,
+      "curPrice": 668000,
+      "id": 28,
+      "type": "regular"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-9.png",
+      "title": "Cây Cọ Ta",
+      "prevPrice": 250000,
+      "curPrice": 770000,
+      "id": 38,
+      "type": "regular"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-5.png",
+      "title": "Cây Dạ Lam",
+      "prevPrice": 250000,
+      "curPrice": 550000,
+      "id": 29,
+      "type": "regular"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-1.png",
+      "title": "Cây Danh Dự",
+      "prevPrice": 250000,
+      "curPrice": 780000,
+      "id": 30,
+      "type": "regular"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-3.png",
+      "title": "Cây Dứa nhỏ",
+      "prevPrice": 250000,
+      "curPrice": 680000,
+      "id": 21,
+      "type": "regular"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-4.png",
+      "title": "Cây chân chim",
+      "prevPrice": 250000,
+      "curPrice": 250000,
+      "id": 32,
+      "type": "regular"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-11.png",
+      "title": "Cây cọ ta",
+      "prevPrice": 250000,
+      "curPrice": 150000,
+      "id": 33,
+      "type": "regular"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-6.png",
+      "title": "Cây dứa nhỏ",
+      "prevPrice": 250000,
+      "curPrice": 375000,
+      "id": 34,
+      "type": "regular"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-5.png",
+      "title": "Cây Dạ Lam",
+      "prevPrice": 250000,
+      "curPrice": 500000,
+      "id": 35,
+      "type": "regular"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-7.png",
+      "title": "Cây Danh Dự",
+      "prevPrice": 250,
+      "curPrice": 850000,
+      "id": 36,
+      "type": "regular"
+    },
+    {
+      "imgSrc": "../assets/images/spx2-3.png",
+      "title": "Cây Đa Búp Đỏ",
+      "prevPrice": 250000,
+      "curPrice": 1000000,
+      "id": 37,
+      "type": "regular"
+    }
+  ],
+  "users": [
+    {
+      "name": "asdasd",
+      "phoneNumber": 123123,
+      "email": "asdasd@",
+      "address": "asdasd",
+      "id": 1
+    }
+  ]
+}

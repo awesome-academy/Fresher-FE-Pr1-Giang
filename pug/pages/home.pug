@@ -5,48 +5,28 @@ include ../components/news
 
 block main
     a(href="") 
-            img(src="./assets/images/slide-1920x590.png")
+            img(src="../assets/images/slide-1920x590.png")
     .container 
         div
             .mt-3  
                 +title("Sản phẩm nổi bật")
-            .row.mt-4.mb-4.mobile-flex-column 
-                .col-md-6.mobile-mb
-                    +productLg(featuredProducts[0])
-                    .row
-                        .col-6 
-                            +productLg(featuredProducts[1])
-                        .col-6 
-                            +productLg(featuredProducts[2])
-                .col-md-6
-                    .row 
-                        .col-6 
-                            +productLg(featuredProducts[3])
-                        .col-6 
-                            +productLg(featuredProducts[4])
-                    +productLg(featuredProducts[5])
+            div(id="featured-products" class="row mt-4 mb-4 mobile-flex-column")
         div 
             .row.mb-4.mobile-flex-column 
                 .col-md-12.col-lg-3.mobile-padding-0  
                     .mt-3.mb-4  
                         +title("Sản phẩm mua nhiều", false)
-                    +bestSellingProducts(bestSellingProducts)
+                    +bestSellingProducts()
                 .col-md-12.col-lg-9
                     .mt-3.mb-4  
                         +title("Sản phẩm khuyến mại", true)
-                    +productList(discountProducts)
-                        each val, index in discountProducts 
-                            .col-md-4
-                                +productLg(val)
-        img(class="mb-4" src="./assets/images/banner-11140x217.png")
+                    +productList("discount-products")
+        img(class="mb-4" src="../assets/images/banner-11140x217.png")
         div 
             .mt-3  
                 +title("Sản phẩm mới", true)
             .mt-4
-                +productList(newProducts)
-                    each val, index in newProducts 
-                        .col-md-3
-                            +productLg(val)
+                +productList("new-products")
         div 
             .mt-3  
                 +title("Tin tức")

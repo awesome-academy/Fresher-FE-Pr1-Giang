@@ -69,14 +69,11 @@ mixin productRow(productItem)
 
 mixin bestSellingProducts(productList)
     .d-flex.flex-column.bestproduct__container 
-        each val in productList 
-            .bestproduct__wrapper
-                +productSm(val)
 
-mixin productList(productList)        
-    .row.mb-4.mobile-flex-column.mobile-mb-0.product-list
+mixin productList(id)        
+    div(id=`${id}` class="row mb-4 mobile-flex-column mobile-mb-0 product-list")
         block
 
-mixin productListColumn(productList)
-    .row.mb-4 
+mixin productListColumn(id)
+    div(id=`${id}` class="row mb-4")
         block

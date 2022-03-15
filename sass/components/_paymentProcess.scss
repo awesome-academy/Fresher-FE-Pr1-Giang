@@ -1,0 +1,136 @@
+/*----------------Payment----------------*/
+.payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.payment__img {
+  width: 20%;
+}
+
+.payment__img > img {
+  border-radius: 20px;
+}
+
+.payment__name {
+  color: #2bc26f;
+  font-size: 18px;
+  text-transform: uppercase;
+  width: 20%;
+}
+
+.payment__price {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  color: #757272;
+}
+
+.payment__quantity {
+  color: #757272;
+}
+
+.payment-complete {
+  aspect-ratio: 9/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2bc26f;
+  border-radius: 10px;
+  border: 5px solid #9fe7c0;
+  color: #ffffff;
+  margin: 50px 0;
+}
+
+.payment-btn__container {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.payment-btn__container > button {
+  margin: 0 10px;
+}
+
+.process-block {
+  display: none;
+  transform-origin: bottom;
+  animation: animate 0.5s;
+  margin: 100px 0;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1,0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1,1);
+    opacity: 1;
+  }
+}
+
+.process-block-active {
+  display: block;
+}
+
+/* Progess bar */
+.progress__bar {
+  margin: 0px auto;
+  margin-bottom: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  width: 80%;
+}
+
+.progress__bar::before, .progress-line {
+  content: "";
+  height: 5px;
+  width: 99%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #b3abab;
+  z-index: -1;
+}
+
+.progress-line {
+  background-color: #2bc26f;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 35px;
+  height: 35px;
+  background-color: #b3abab;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-info);
+  position: absolute;
+  top: 120%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  color: #757272;
+}
+
+.progress-step-active {
+  background-color: #2bc26f;
+  color: #ffffff;
+}

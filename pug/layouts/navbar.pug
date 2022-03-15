@@ -7,16 +7,16 @@ mixin navbar
                 button.row.justify-flex-start 
                     i(class="fa-solid fa-bars")
                 ul.d-flex.align-items-center.m-0 
-                    +navLink('TRANG CHỦ')
-                    +navLink('GIỚI THIỆU')
+                    +navLink('TRANG CHỦ', "./home.html")
+                    +navLink('GIỚI THIỆU', "./newsDetails.html")
                     li.nav-link
-                        a.me-1 SẢN PHẨM
+                        a(class="me-1" href="./productList_grid.html") SẢN PHẨM
                         i(class="fa-solid fa-caret-down ml-1")
                     li.nav-link
-                        a.me-1 SẢN PHẨM MỚI
+                        a(href="./productList_column.html" class="me-1") SẢN PHẨM MỚI
                         i(class="fa-solid fa-caret-down ml-1")
-                    +navLink('TIN TỨC')
-                    +navLink('LIÊN HỆ')
+                    +navLink('TIN TỨC', "./news.html")
+                    +navLink('LIÊN HỆ', "./contact.html")
                 .nav-right
                     button.mr-1 
                         i(class="fa-solid fa-magnifying-glass")

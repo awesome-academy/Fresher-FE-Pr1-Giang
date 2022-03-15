@@ -1,6 +1,6 @@
-mixin navLink(text)
+mixin navLink(text, link)
     li.nav-link
-        a=text
+        a(href=`${link}`)=text
 
 mixin navList(navList)
     nav 
