@@ -1,0 +1,19 @@
+extends ../base/layout
+include ../components/breadcrumb
+include ../components/title
+include ../components/register
+include ../components/input
+include ../components/button
+
+block main  
+  .container 
+    +breadCrumb(["Home"], "Đăng ký")
+    form.mt-5.mb-5 
+      +nolineTitle("thông tin cá nhân")
+      +registerForm(personalInfo)
+      +checkboxInput("Đăng ký nhận thông tin qua email")
+      +nolineTitle("thông tin tài khoản")
+      +registerForm(accountInfo)
+      .register-btn__container
+        +primaryBtn("QUAY LẠI")
+        +primaryBtn("ĐĂNG KÝ")

@@ -1,0 +1,119 @@
+.comment-title__conatiner {
+  & > h5 {
+    color: $gray-color;
+  }
+}
+
+.comment-section {
+  margin: 40px 0;
+}
+
+.comment {
+  border-bottom: 1px solid $light-gray-color;
+  margin: 30px 0;
+
+  .comment-lg {
+    @include flex(row, flex-start, flex-start);
+    margin: 30px 0;
+
+    &__img {
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+    }
+
+    &__info {
+      padding-left: 30px;
+    }
+
+    &__name {
+      @include flex(row, center, space-between);
+      font-size: $fs-lg;
+      color: $black-color;
+
+      span {
+        font-style: italic;
+        text-decoration: underline;
+      }
+    }
+
+    &__content {
+      font-size: $fs-md;
+      color: $gray-color;
+      margin: 10px 0;
+    }
+
+    &__date {
+      font-style: italic;
+      font-size: $fs-md;
+      color: $gray-color;
+    }
+  }
+}
+
+.comment-sm {
+  @include flex(row, flex-start, flex-end);
+
+  &__container {
+    @include flex(row, flex-start, flex-start);
+    width: 89%;
+    border-top: 1px solid $light-gray-color;
+    padding: 30px 0;
+  }
+}
+
+.comment-form {
+  margin: 30px 0;
+
+  &__container {
+    @include flex(row, flex-start, space-between);
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+
+    @include respond-to(smallphone-and-down) {
+      margin-bottom: 0px;
+    }
+
+    & > * {
+      position: relative;
+
+      width: 30%;
+
+      @include respond-to(smallphone-and-down) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px 20px;
+        border: 1px solid $light-gray-color;
+        outline: none;
+
+        &::placeholder {
+          font-size: $fs-md;
+        }
+      }
+    }
+  }
+
+  &__textarea {
+    position: relative;
+
+    label {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: $fs-md;
+      color: $black-color;
+    }
+
+    textarea {
+      width: 100%;
+      border: 1px solid $light-gray-color;
+      outline: none;
+    }
+  }
+}

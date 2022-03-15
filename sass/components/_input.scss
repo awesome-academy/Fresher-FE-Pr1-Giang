@@ -41,3 +41,27 @@
         background-color: $primary-color;
     }
 }
+
+.check-box {
+  @include flex(row, center, flex-start);
+
+  input {
+    width: 15px;
+    height: 15px;
+    border-radius: 0;
+  }
+
+  label {
+    margin-left: 8px;
+    font-size: $fs-md;
+    color: $gray-color;
+  }
+}
+
+.forgot-password {
+  font-size: $fs-md;
+  margin-left: 20px;
+  font-style: italic;
+  text-decoration: underline!important;
+  color: $black-color;
+}

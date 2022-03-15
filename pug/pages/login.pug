@@ -1,0 +1,26 @@
+extends ../base/layout
+include ../components/breadcrumb
+include ../components/title
+include ../components/input
+include ../components/button
+include ../components/login
+
+block main 
+  .container 
+    +breadCrumb(["Home"], "Đăng nhập")
+    .row 
+      .col-md-6
+        form.mt-5.mb-5 
+          +nolineTitle("thông tin cá nhân")
+          +loginForm(loginInfo)
+          .d-flex.align-items-center
+            +checkboxInput("Ghi nhớ tài khoản")
+            a(href="" class="forgot-password") Bạn quên mật khẩu? 
+          .register-btn__container
+            +primaryBtn("ĐĂNG NHẬP")
+      .col-md-6 
+        .mt-5.mb-5
+          +nolineTitle("bạn chưa có tài khoản ?")
+          p.login-announcement Đăng ký tài khoản ngay để có thể mua hàng nhanh chóng và dễ dàng hơn ! Ngoài ra còn có rất nhiều chính sách và ưu đãi cho các thành viên.
+          .register-btn__container
+            +primaryBtn("ĐĂNG KÝ")

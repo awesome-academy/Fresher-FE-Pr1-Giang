@@ -1,0 +1,36 @@
+.register-form {
+  @include flex(row, center, flex-start);
+  flex-wrap: wrap;
+  margin-top: 30px;
+
+  & > * {
+    width: 46%;
+  }
+
+  .title-important::after {
+    content: " *";
+    color: $red-color;
+  }
+
+  span {
+    color: $red-color;
+    margin-left: 2px;
+  }
+}
+
+.register-btn__container {
+  margin: 30px 0;
+
+  @include respond-to(smallphone-and-down) {
+    @include flex(column, flex-start, flex-start);
+  }
+
+  button {
+    margin-right: 20px;
+
+    @include respond-to(smallphone-and-down) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+}
