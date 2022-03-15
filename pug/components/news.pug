@@ -10,3 +10,28 @@ mixin news(news)
 mixin newsList(list)
     .row.mt-4.mb-5.mobile-flex-column
         block
+
+mixin featuredNews(news)
+  .featured-news 
+    .featured-news__img
+      a 
+        img(src=news.imgSrc)
+    .featured-news__title=news.title 
+
+mixin newsLg(news)
+  .news-lg.mb-5 
+    h6(class="news-lg__title")=news.title 
+    .news-lg__subtitle 
+      .news-lg__date 
+        i(class="fa-solid fa-calendar-minus")
+        span=news.datePosted
+      .news-lg__time
+        i(class="fa-solid fa-clock")
+        span=news.timePosted
+      .news-lg__comment
+        i(class="fa-solid fa-comment-dots")
+        span=`${news.comment} Bình luận`
+    .news-lg__img 
+      a 
+        img(src=news.imgSrc)
+    p(class="news-lg__content")=news.content

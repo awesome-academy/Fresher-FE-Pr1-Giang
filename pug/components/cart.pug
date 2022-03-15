@@ -1,0 +1,47 @@
+mixin cartTable(itemList)
+  table.cart-table
+    tr 
+      th hình ảnh
+      th Tên sản phẩm
+      th Đơn giá
+      th Số lượng
+      th Thành tiền
+      th Xóa
+    each item in itemList 
+      +cartItem(item)
+      
+mixin cartItem(item)
+  -
+    function convertMoney(money) {
+        return money.toFixed(0).toString().split(/(?=(?:\d{3})+(?:\.|$))/g).join('.') + ' đ';
+    }
+  tr 
+    td.cart-table__img
+      img(src=item.imgSrc)
+    td(class="cart-table__title")=item.title
+    td=`${convertMoney(item.curPrice)}`
+    td
+      .cart-table__quantity  
+        div
+          span=item.amount
+    td=`${convertMoney(item.curPrice * item.amount)}`
+    td 
+      button 
+        i(class="fa-solid fa-trash-can")
+
+mixin cartPayment(itemList)
+  -
+    function convertMoney(money) {
+        return money.toFixed(0).toString().split(/(?=(?:\d{3})+(?:\.|$))/g).join('.') + ' đ';
+    }
+  .cart-payment__container 
+    table.cart-payment 
+      tr 
+        td tổng tiền (chưa thuế)
+        td=`${convertMoney(taxExcluded)}`
+      tr 
+        td thuế (vat 10%)
+        td=`${convertMoney(tax)}`
+      tr 
+        th tổng phải thanh toán 
+        th=`${convertMoney(total)}`

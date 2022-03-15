@@ -1,24 +1,27 @@
 mixin title(text, condition)
-    h5.title__container.mb-1 
-        span=text
-        .title__buttons 
-            if condition 
-                button 
-                    i(class="fa-solid fa-angle-left")
-                button 
-                    i(class="fa-solid fa-angle-right")
+  h5.title__container.mb-1 
+      span=text
+      .title__buttons 
+          if condition 
+              button 
+                  i(class="fa-solid fa-angle-left")
+              button 
+                  i(class="fa-solid fa-angle-right")
 
 mixin filterHeading()
-    .filter-heading.row
-        .col-md-3.d-flex
-            i(class="fa-solid fa-table-cells active")
-            i(class="fa-solid fa-table-list")
-        .col-md-6.d-flex.justify-content-end
-            .d-flex.align-items-center
-                p Sắp xếp theo
-                select.ms-3 
-                    option Tên sản phẩm
-            .d-flex.ms-5.align-items-center
-                p Show
-                select.ms-3 
-                    option 15    
+  .filter-heading.row
+      .col-md-3.d-flex
+          i(class="fa-solid fa-table-cells active")
+          i(class="fa-solid fa-table-list")
+      .col-md-6.d-flex.justify-content-end
+          .d-flex.align-items-center
+              p Sắp xếp theo
+              select.ms-3 
+                  option Tên sản phẩm
+          .d-flex.ms-5.align-items-center
+              p Show
+              select.ms-3 
+                  option 15  
+
+mixin nolineTitle(text)
+  h5(class="title-noline")=text
