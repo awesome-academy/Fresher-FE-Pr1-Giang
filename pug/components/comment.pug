@@ -1,0 +1,33 @@
+include ./title
+
+mixin comment(user)
+  .comment-lg__img 
+    img(src=user.userImg alt="user-img")
+  .comment-lg__info 
+    .comment-lg__name 
+      p=user.userName
+      span Trả lời
+    .comment-lg__content 
+      p=user.comment
+    div(class="comment-lg__date")=user.date
+
+mixin commentSection(user)
+  .comment 
+    .comment-lg 
+      +comment(user)
+    if (user.reply)
+      .comment-sm
+        .comment-sm__container
+          +comment(user.replyingUser)
+
+mixin commentForm()
+  form.comment-form
+    .comment-form__container
+      div
+        input(type="text" placeholder="Họ và tên:")
+      div
+        input(type="text" placeholder="Email:")
+      div
+        input(type="text" placeholder="Phone:")
+    .comment-form__textarea 
+      textarea(cols="30", rows="10" placeholder="Bình luận") 

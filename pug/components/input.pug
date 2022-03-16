@@ -9,3 +9,8 @@ mixin emailInput()
         input(type="email")
         button 
             i(class="fa-solid fa-paper-plane")
+
+mixin checkboxInput(text)
+  .check-box 
+    input(type="checkbox")
+    label=text

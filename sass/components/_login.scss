@@ -1,0 +1,28 @@
+.auth {
+  margin-right: 50px;
+  margin-bottom: 30px;
+
+  @include respond-to(smallphone-and-down) {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  &__title {
+    color: $gray-color;
+    font-size: $fs-md;
+    margin-bottom: 6px;
+  }
+
+  &__input {
+    input {
+      width: 100%;
+      padding: 8px 0;
+      border: 1px solid $light-gray-color;
+    }
+  }
+}
+
+.login-announcement {
+  font-size: $fs-md;
+  color: $gray-color;
+}

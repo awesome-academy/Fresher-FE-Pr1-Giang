@@ -1,0 +1,10 @@
+mixin registerForm(inputList)
+  .register-form 
+    each val in inputList 
+      .auth
+        if (val.important)
+          label(class="auth__title title-important")=val.title
+        else 
+          label(class="auth__title ")=val.title
+        .auth__input
+          input(type="text")

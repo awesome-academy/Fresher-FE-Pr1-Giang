@@ -35,3 +35,8 @@ mixin newsLg(news)
       a 
         img(src=news.imgSrc)
     p(class="news-lg__content")=news.content
+    if (news.content1) 
+      .news-lg__img.mt-3 
+        a 
+          img(src=news.imgContent)
+      p(class="news-lg__content")=news.content1

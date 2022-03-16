@@ -1,0 +1,7 @@
+mixin loginForm(inputList)
+  .login-form 
+    each val in inputList 
+      .auth
+        label(class="auth__title ")=val
+        .auth__input
+          input(type="text")
