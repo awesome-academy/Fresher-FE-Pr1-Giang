@@ -3,22 +3,47 @@ include ./button
 
 mixin productLg(productItem)
     .product-lg.mobile-mb.mb-4
-        a 
+      if (typeof productItem.status === "string")
+        .product-lg__img
+          a 
             img(src=productItem.imgSrc)
-        .d-flex.justify-content-center.align-items-center 
-            .product__info.d-flex.flex-column 
-                p(class="mb-1")=productItem.title
-                .d-flex.justify-content-center.mb-1
-                    +starsRate(4)
-                .d-flex.justify-content-center.align-items-center 
-                    span(class="current-price me-1")=productItem.curPrice
-                    span(class="prev-price")=productItem.prevPrice
+          span(class="badge-green")
+            span=productItem.status
+          .product-hover 
+            +primaryBtn("MUA NGAY")
+            +secondaryBtn("fa-solid fa-magnifying-glass")
+      else if (typeof productItem.status === "number") 
+        .product-lg__img
+          a 
+            img(src=productItem.imgSrc)
+          span(class="badge-red")
+            span=`${productItem.status}%`
+          .product-hover 
+            +primaryBtn("MUA NGAY")
+            +secondaryBtn("fa-solid fa-magnifying-glass")
+      else 
+        .product-lg__img
+          a 
+            img(src=productItem.imgSrc)
+          .product-hover 
+            +primaryBtn("MUA NGAY")
+            +secondaryBtn("fa-solid fa-magnifying-glass")
+      .d-flex.justify-content-center.align-items-center 
+          .product__info.d-flex.flex-column 
+              p(class="mb-1")=productItem.title
+              .d-flex.justify-content-center.mb-1
+                  +starsRate(4)
+              .d-flex.justify-content-center.align-items-center 
+                  span(class="current-price me-1")=productItem.curPrice
+                  span(class="prev-price")=productItem.prevPrice
 
 mixin productSm(productItem)
     .d-flex.product-sm 
         .col-md-5.m-2.img__container
             a 
-                img(src=productItem.imgSrc)
+              img(src=productItem.imgSrc)
+            .product-hover 
+              +secondaryBtn("fa-solid fa-magnifying-glass")
         .col-md-7.ms-2.d-flex.flex-column.justify-content-center
             p(class="mb-1")=productItem.title
             .d-flex.mb-1
@@ -35,7 +60,7 @@ mixin productRow(productItem)
                 .product-row__info 
                     p(class="product-row__title")=productItem.title
                     +starsRate(4)
-                    p(class="product-row__desc")=productItem.desc
+                    p(class="product-row__desc d-md-none d-lg-block")=productItem.desc
                     span(class="product-row__price")=productItem.curPrice
                     .btn__wrapper
                         +primaryBtn("MUA NGAY")
@@ -49,7 +74,7 @@ mixin bestSellingProducts(productList)
                 +productSm(val)
 
 mixin productList(productList)        
-    .row.mb-4.mobile-flex-column.mobile-mb-0
+    .row.mb-4.mobile-flex-column.mobile-mb-0.product-list
         block
 
 mixin productListColumn(productList)

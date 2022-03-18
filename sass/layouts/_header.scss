@@ -17,6 +17,10 @@ header {
         @include respond-to('smallphone-and-down') {
             display: none;
         }
+
+        @include respond-to('tablet-and-down') {
+          display: none;
+        }
     }
 
     .cart {
@@ -49,6 +53,11 @@ header {
         color: $white-color!important;
     }
 
+    @include respond-to('tablet-and-down') {
+      @include flex(row, center, center);
+      height: 40px;
+    }
+
     button {
         border: none;
         background-color: transparent;
@@ -71,6 +80,16 @@ header {
             top: 0;
             left: -100%;
         }
+
+        @include respond-to('tablet-and-down') {
+          flex-direction: column;
+          display: block;
+          background-color: $primary-color;
+          position: absolute;
+          z-index: 3;
+          top: 0;
+          left: -100%;
+      }
     }
 
     .container {
@@ -79,6 +98,10 @@ header {
                 justify-content: space-between;
                 position: relative;
             }  
+
+            @include respond-to('tablet-and-down') {
+              justify-content: space-between;
+            }
         }
     }
 
@@ -86,6 +109,10 @@ header {
         display: none;
         @include respond-to('smallphone-and-down') {
             display: block;
+        }
+
+        @include respond-to('tablet-and-down') {
+          display: block;
         }
     }
 }

@@ -35,14 +35,18 @@
 
 .featured-news {
   @include flex(row, flex-start, flex-start);
-  height: 80px;
   margin-bottom: 15px;
   font-size: $fs-md;
   color: $black-color;
 
   &__img {
     width: 25%;
+    height: 80px;
     border: 1px solid $light-gray-color;
+
+    @include respond-to(tablet-and-down) {
+      width: 100%;
+    }
 
     img {
       height: 100%;
@@ -53,6 +57,10 @@
     width: 75%;
     padding-left: 10px;
     margin-top: 5px;
+
+    @include respond-to(tablet-and-down) {
+      width: 100%;
+    }
   }
 }
 

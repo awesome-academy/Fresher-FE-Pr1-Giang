@@ -1,0 +1,28 @@
+extends ../base/layout
+include ../components/title
+include ../components/login
+include ../components/breadcrumb
+include ../components/contact
+
+block main 
+  .container 
+    +breadCrumb(["Home"], "Liên hệ")
+  img(src="./assets/images/map.png")
+  .container 
+    .row 
+      .col-md-6
+        form.mt-5.mb-5 
+          +nolineTitle("thông tin liên hệ")
+          .contact-form 
+            +loginForm(contact)
+            .contact-form__comment
+              label(class="auth__title title-important") Bình luận
+              .auth__input
+                textarea(name="", cols="30", rows="10")
+      .col-md-6 
+        .mt-5.mb-5
+          .contact-logo
+            img(src="./assets/images/logo-mobile.png")
+          p.contact-announcement DKT được thành lập với niềm đam mê và khát vọng thành công trong lĩnh vực Thương mại điện tử. Chúng tôi đã và đang khẳng định được vị trí hàng đầu bằng những sản phẩm.
+          +contactInfo("fa-solid fa-mobile-screen-button", "Điện thoại: (84-4) 66.558.868")
+          +contactInfo("fa-solid fa-envelope", "Email: info@dkt.com.vn")

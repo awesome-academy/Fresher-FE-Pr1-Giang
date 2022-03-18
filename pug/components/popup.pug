@@ -1,0 +1,16 @@
+include ./input
+
+mixin popUp()
+  .pop-up 
+    .pop-up__wrapper
+      .pop-up__inner-wrapper
+        .col-lg-5.pop-up__container
+          img(src="./assets/images/popup.png" alt="pop-up")
+        .col-lg-7.pop-up__container
+          .pop-up__email
+            img(src="./assets/images/popup1.png" alt="pop-up")
+            h3 ĐĂNG KÝ NGAY EMAIL HÔM NAY
+            +emailInput
+            p Đăng ký email ngay hôm nay để nhận các thông tin về sự kiện và các chương trình giảm giá từ chúng tôi
+            +checkboxInput("Không hiển thị lại thông báo này nữa")
+        button.close-btn X

@@ -1,0 +1,44 @@
+.contact-form {
+  &__comment {
+    margin-right: 50px;
+    margin-bottom: 30px;
+
+    @include respond-to(tablet-and-down) {
+      margin-right: 0;
+    }
+
+    @include respond-to(smallphone-and-down) {
+      margin: 0;
+    }
+    
+    textarea {
+      width: 100%;
+      border: 1px solid #b3abab;
+    }
+  }
+}
+
+.contact-logo {
+  width: 50%;
+}
+
+.contact-announcement {
+  color: $gray-color;
+  font-size: $fs-md;
+  padding: 20px 0;
+}
+
+.contact-info {
+  @include flex(row, center, flex-start);
+  margin-bottom: 10px;
+
+  i {
+    color: $primary-color;
+    width: 20px;
+  }
+
+  span {
+    color: $gray-color;
+    font-size: $fs-md;
+  }
+}

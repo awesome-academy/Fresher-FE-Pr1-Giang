@@ -4,14 +4,14 @@ include ../components/navlink
 
 mixin footer
         footer 
-            .footer-top 
+            .footer-top.align-items-md-center 
                 .container 
                     .row.mobile-flex-column
-                        .col-md-4.mobile-mb
+                        .col-md-4.mobile-mb.d-md-flex.flex-md-column.justify-content-md-center
                             div(class="mobile-mb mobile-change-color") KÊNH THÔNG TIN TỪ CHÚNG TÔI:
                             +mediaIcons(mediaIcons)
                         .col-md-8
-                            .row.mobile-flex-column
+                            .row.mobile-flex-column.d-md-flex.align-items-md-center
                                 .col-md-3 
                                     div(class="mobile-mb mobile-change-color") ĐĂNG KÝ NHẬN EMAIL TỪ CHÚNG TÔI
                                 .col-md-9 
@@ -40,7 +40,7 @@ mixin footer
                                         +footerNav(policies)
                                     .col-md-2.mobile-mb
                                         +footerNav(newsNav)
-            .footer-bottom.d-md-flex.align-items-center.d-none.d-md-block
+            .footer-bottom.d-lg-flex.align-items-center.d-none.d-lg-block
                 .container 
                     .row.justify-content-between 
                         .col-md-6

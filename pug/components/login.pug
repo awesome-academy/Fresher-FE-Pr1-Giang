@@ -2,6 +2,9 @@ mixin loginForm(inputList)
   .login-form 
     each val in inputList 
       .auth
-        label(class="auth__title ")=val
+        if (val.important)
+          label(class="auth__title title-important")=val.title
+        else 
+          label(class="auth__title ")=val.title
         .auth__input
           input(type="text")
