@@ -1,18 +1,19 @@
-const displayGridProducts = (allProducts) => {
+const displayGridProducts = async () => {
   const productList = document.getElementById('product-list-grid');
+  const response = await fetch(products_url);
+  let products = await response.json();
 
   if(productList) {
     let list = "";
 
-    for(let i = 0; i < allProducts.length; i++){
+    for(let i = 0; i < products.length; i++){
       list += `<div class="col-md-4">
-                ${productLarge(allProducts[i])}
+                ${productLarge(products[i])}
               </div>`
     };
 
     productList.innerHTML = list;
   }
-  
 };
 
 const displayColumnProducts = (featuredProducts) => {
@@ -33,7 +34,7 @@ const displayColumnProducts = (featuredProducts) => {
                         <p class="product-row__desc d-md-none d-lg-block">${featuredProducts[i].desc}</p>
                         ${prices(featuredProducts[i].curPrice)}
                         <div class="btn__wrapper">
-                          <button class="btn-order add-btn" data-category="featuredProducts" data-id=${featuredProducts[i].id} >MUA NGAY</button>
+                          <button class="btn-order add-btn" data-category="undefined" data-id=${featuredProducts[i].id} >MUA NGAY</button>
                           <button class="btn-rounded"> <i class="fa-solid fa-magnifying-glass"></i></button>
                           <button class="btn-rounded"> <i class="fa-solid fa-heart"></i></button>
                         </div>

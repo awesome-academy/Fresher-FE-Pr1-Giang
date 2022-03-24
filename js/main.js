@@ -36,6 +36,7 @@ const addProductToCart = (button, products) => {
 
 const addEventBtn = (products) => {
   const btnOrder = document.querySelectorAll('.add-btn');
+  console.log(btnOrder);
 
   btnOrder.forEach(button => {
     button.addEventListener('click', () => addProductToCart(button, products));
