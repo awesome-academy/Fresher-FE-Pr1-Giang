@@ -8,6 +8,11 @@ header {
 
         font-size: $fs-md;
 
+        a {
+          color: $gray-color;
+          font-size: $fs-md;
+        }
+
         @include respond-to('smallphone-and-down') {
             display: none;
         }
@@ -115,4 +120,8 @@ header {
           display: block;
         }
     }
+}
+
+.basket {
+  color: $black-color;
 }

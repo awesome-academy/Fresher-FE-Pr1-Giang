@@ -115,10 +115,6 @@
             font-size: $fs-md;
         }
 
-        .current-price {
-            color: $red-color;
-        }
-
         .prev-price {
             font-size: $fs-sm;
             color: $light-gray-color;
@@ -286,3 +282,7 @@
         padding: 0px;
     }
 };
+
+.current-price {
+  color: $red-color;
+}

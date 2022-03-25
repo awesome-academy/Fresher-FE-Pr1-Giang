@@ -1,7 +1,4 @@
 extends ../base/productList_base
 
 block mainSection
-    +productList([...bestSellingProducts, ...discountProducts])
-        each val, index in [...bestSellingProducts, ...discountProducts] 
-            .col-md-4
-                +productLg(val)
+    +productList("product-list-grid")

@@ -4,7 +4,7 @@ const sass = require('gulp-sass')(require('sass'));
 const pug = require('gulp-pug');
 const browserSync = require('browser-sync').create();
 
-const FilesPath = { sassFiles: 'sass/**/*.scss', jsFiles: 'js/*.js', htmlFiles: 'pug/**/*.pug' };
+const FilesPath = { sassFiles: 'sass/**/*.scss', jsFiles: 'js/**/*.js', htmlFiles: 'pug/**/*.pug' };
 const { sassFiles, jsFiles, htmlFiles } = FilesPath;
 
 const sassTask = () => {
