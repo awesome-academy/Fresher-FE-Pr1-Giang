@@ -1,10 +1,8 @@
-const pagination = (products) => {
+const pagination = (products, limit, total) => {
   const pagination = document.querySelector('.page-navigation');
 
   if(pagination) {
-    const products_per_page = 12;
-
-    const pageNum = Math.ceil(products.length / products_per_page);
+    const pageNum = Math.ceil(total / limit);
 
     let paginatedBtns = "";
 
@@ -16,22 +14,22 @@ const pagination = (products) => {
 
     pagination.innerHTML = paginatedBtns;
 
-    addPaginatedBtn();
+    addPaginatedBtn(products, limit);
   }
 };
 
-const addPaginatedBtn = () => {
+const addPaginatedBtn = (products, limit) => {
   const paginatedBtns = document.querySelectorAll('.pag-btn');
 
   paginatedBtns.forEach(button => {
-    button.addEventListener('click', () => handlePaginatedBtn(button))
+    button.addEventListener('click', () => handlePaginatedBtn(button, products, limit))
   })
 };
 
-const handlePaginatedBtn = (button) => {
+const handlePaginatedBtn = (button, products, limit) => {
   const pageNum = button.getAttribute('data-page-num');
 
-  products_url = `http://localhost:3000/products?_page=${pageNum}&_limit=12`;
+  page = pageNum;
 
-  displayGridProducts();
+  displayGridProducts(products);
 };

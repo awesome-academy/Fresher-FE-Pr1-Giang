@@ -1,3 +1,8 @@
 const PRODUCTS_API_URL = 'http://localhost:3000/products';
 const USERS_API_URL = 'http://localhost:3000/customer';
-let products_url = 'http://localhost:3000/products?_page=1&_limit=12';
+let page = 1;
+const product_url = (page) => {
+  return `${PRODUCTS_API_URL}?_page=${page}&_limit=12`
+};
+
+product_url(page);

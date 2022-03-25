@@ -1,6 +1,7 @@
-const displayGridProducts = async () => {
+const displayGridProducts = async (productAll) => {
   const productList = document.getElementById('product-list-grid');
-  const response = await fetch(products_url);
+  const response = await fetch(product_url(page));
+  const totalNum = response.headers.get('X-Total-Count');
   let products = await response.json();
 
   if(productList) {
@@ -13,6 +14,9 @@ const displayGridProducts = async () => {
     };
 
     productList.innerHTML = list;
+    pagination(productAll, 12, totalNum);
+    addEventBtn(products);
+    return;
   }
 };
 
@@ -34,7 +38,7 @@ const displayColumnProducts = (featuredProducts) => {
                         <p class="product-row__desc d-md-none d-lg-block">${featuredProducts[i].desc}</p>
                         ${prices(featuredProducts[i].curPrice)}
                         <div class="btn__wrapper">
-                          <button class="btn-order add-btn" data-category="undefined" data-id=${featuredProducts[i].id} >MUA NGAY</button>
+                          <button class="btn-order add-btn" data-id=${featuredProducts[i].id} >MUA NGAY</button>
                           <button class="btn-rounded"> <i class="fa-solid fa-magnifying-glass"></i></button>
                           <button class="btn-rounded"> <i class="fa-solid fa-heart"></i></button>
                         </div>
@@ -46,6 +50,8 @@ const displayColumnProducts = (featuredProducts) => {
     };
 
     productList.innerHTML = list;
+    addEventBtn(featuredProducts);
+    return;
   }
 };
 
@@ -86,11 +92,13 @@ const displayDiscounts = (discountProducts) => {
 
     for(let i = 0; i < discountProducts.length; i++){
       list += `<div class="col-md-4">
-                ${productLarge(discountProducts[i], "discountProducts")}
+                ${productLarge(discountProducts[i])}
               </div>`
     };
 
     productList.innerHTML = list;
+    addEventBtn(discountProducts);
+    return;
   }
 };
 
@@ -102,11 +110,13 @@ const displayNewProducts = (newProducts) => {
 
     for(let i = 0; i < newProducts.length; i++){
       list += `<div class="col-md-3">
-                ${productLarge(newProducts[i], "newProducts")}
+                ${productLarge(newProducts[i])}
             </div>`
     };
 
     productList.innerHTML = list;
+    addEventBtn(newProducts);
+    return;
   }
 };
 
@@ -132,12 +142,12 @@ const prices = (curPrice, prevPrice= false) => {
   }
 };
 
-const productLarge = (product, category) => {
+const productLarge = (product) => {
   return `
     <div class="product-lg mobile-mb mb-4">
       <div class="product-lg__img"><a> <img src=${product.imgSrc}></a>
         <div class="product-hover"> 
-          <button class="btn-order add-btn" data-category=${category} data-id=${product.id} >MUA NGAY</button>
+          <button class="btn-order add-btn" data-id=${product.id} >MUA NGAY</button>
           <button class="btn-rounded"> <i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
       </div>
@@ -162,26 +172,29 @@ const displayFeatured = (featuredProducts) => {
   if(productList) {
     productList.innerHTML = `
     <div class="col-md-6 mobile-mb d-flex flex-wrap">
-            ${productLarge(featuredProducts[0], "featuredProducts")}
+            ${productLarge(featuredProducts[0])}
             <div class="row">
               <div class="col-6"> 
-                ${productLarge(featuredProducts[1], "featuredProducts")}
+                ${productLarge(featuredProducts[1])}
               </div>
               <div class="col-6"> 
-                ${productLarge(featuredProducts[2], "featuredProducts")}
+                ${productLarge(featuredProducts[2])}
               </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="row"> 
               <div class="col-6"> 
-                ${productLarge(featuredProducts[3], "featuredProducts")}
+                ${productLarge(featuredProducts[3])}
               </div>
               <div class="col-6"> 
-                ${productLarge(featuredProducts[4], "featuredProducts")}
+                ${productLarge(featuredProducts[4])}
               </div>
             </div>
-              ${productLarge(featuredProducts[5], "featuredProducts")}
+              ${productLarge(featuredProducts[5])}
           </div>`;
+
+  addEventBtn(featuredProducts);
+  return;
   }
 };
