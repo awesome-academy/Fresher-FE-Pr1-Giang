@@ -30,6 +30,8 @@ const handlePaginatedBtn = (button, products, limit) => {
   const pageNum = button.getAttribute('data-page-num');
 
   page = pageNum;
+  category = "";
 
   displayGridProducts(products);
+  displayColumnProducts(products);
 };

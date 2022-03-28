@@ -11,10 +11,10 @@ block main
             .col-md-3 
                 +title("Danh mục sản phẩm", false)
                 .sidebar__navlink.mt-3 
-                    +navList(productCategory)
+                    +navList('sidebar-product')
                 +title("Tìm theo giá", false)
                 .sidebar__navlink.mt-3 
-                    +navList(prices)
+                    +navList()
                 +title("Tìm theo màu", false)
                 .sidebar__navlink.mt-3 
                     +colorsList(colors)
@@ -22,4 +22,4 @@ block main
                 img(class="mt-3" src="../assets/images/bannerproductlist.png")
                 +filterHeading()
                 block mainSection
-                +pagination([1,2,3,4])
+                +pagination()

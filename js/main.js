@@ -135,11 +135,11 @@ const addSubmitEvent = () => {
           headers: { 'Content-type': 'application/json' },
           body: JSON.stringify(customer)
         });
+
+        setProductStorage('cart', []);
       } else {
         document.getElementById('final-step').innerHTML = "Thanh toán không thành công! xin mời kiểm tra lại thông tin cá nhân";
       }
-  
-      setProductStorage('cart', []);
     });
   }
 };
