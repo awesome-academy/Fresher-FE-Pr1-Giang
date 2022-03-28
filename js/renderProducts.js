@@ -10,17 +10,16 @@ const getProducts = async () => {
   const newProducts = productList.filter(product => product.type === "new");
   const allProducts = productList.filter(product => product.type === "regular");
 
-  displayGridProducts(allProducts);
   displayColumnProducts(featuredProducts);
   displayBestSelling(bestSellingProducts);
   displayDiscounts(discountProducts);
   displayNewProducts(newProducts);
   displayFeatured(featuredProducts);
+  await displayGridProducts(productList);
   displayCartItems();
   displayCartPayment();
   displayPaymentList();
 
-  addEventBtn(productList);
   deleteEventBtn();
   addProcessEvent();
   addSubmitEvent();

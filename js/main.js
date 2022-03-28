@@ -38,6 +38,8 @@ const addEventBtn = (products) => {
   const btnOrder = document.querySelectorAll('.add-btn');
 
   btnOrder.forEach(button => {
+    button.removeEventListener('click', () => addProductToCart(button, products));
+
     button.addEventListener('click', () => addProductToCart(button, products));
   });
 };

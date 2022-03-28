@@ -1,27 +1,24 @@
 const customerValidate = (customer) => {
   if(typeof customer.name !== 'string') {
     document.getElementById('name-error').innerText = "Please enter text only!";
-    console.log('name');
+    
     return false
   }
 
   if(typeof customer.phoneNumber !== 'number') {
     document.getElementById('number-error').innerText = "Please enter numbers!";
-    console.log('number');
 
     return false
   }
 
   if(!customer.email.includes("@")) {
     document.getElementById('email-error').innerText = "ex: example@gmail.com";
-    console.log('email');
 
     return false
   }
 
   if(typeof customer.address !== 'string') {
     document.getElementById('address-error').innerText = "Please enter text only!";
-    console.log('address');
 
     return false
   }

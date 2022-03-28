@@ -24,7 +24,6 @@ const htmlTask = () => {
 
 const jsTask = () => {
     return src(jsFiles)
-            .pipe(concat('main.js'))
             .pipe(dest('dist/js'));
 };
 
