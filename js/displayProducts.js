@@ -1,8 +1,15 @@
 const displayGridProducts = async (productAll) => {
   const productList = document.getElementById('product-list-grid');
-  const response = await fetch(product_url(page));
-  const totalNum = response.headers.get('X-Total-Count');
-  let products = await response.json();
+  let products;
+
+  if(category !== "") {
+    const response = await fetch(type_url(category));
+    products = await response.json();
+  } else {
+    const response = await fetch(product_url(page));
+    totalNum = response.headers.get('X-Total-Count');
+    products = await response.json();
+  }
 
   if(productList) {
     let list = "";
@@ -14,31 +21,42 @@ const displayGridProducts = async (productAll) => {
     };
 
     productList.innerHTML = list;
+    filterType(productAll);
     pagination(productAll, 12, totalNum);
     addEventBtn(products);
     return;
   }
 };
 
-const displayColumnProducts = (featuredProducts) => {
+const displayColumnProducts = async (productAll) => {
   const productList = document.getElementById('product-list-column');
+  let products;
+
+  if(category !== "") {
+    const response = await fetch(type_url(category));
+    products = await response.json();
+  } else {
+    const response = await fetch(product_url(page));
+    products = await response.json();
+    totalNum = response.headers.get('X-Total-Count');
+  }
 
   if(productList) {
     let list = "";
 
-    for(let i = 0; i < featuredProducts.length; i++){
+    for(let i = 0; i < products.length; i++){
       list += `<div class="col-md-12">
                 <div class="product-row d-flex mb-4 mobile-flex-column">
-                  <div class="col-md-4 col-12"> <a> <img src=${featuredProducts[i].imgSrc}></a></div>
+                  <div class="col-md-4 col-12"> <a> <img src=${products[i].imgSrc}></a></div>
                   <div class="col-md-8 col-12">
                     <div class="product-row__wrapper"> 
                       <div class="product-row__info"> 
-                        <p class="product-row__title">${featuredProducts[i].title}</p>
+                        <p class="product-row__title">${products[i].title}</p>
                         ${rating(5)}
-                        <p class="product-row__desc d-md-none d-lg-block">${featuredProducts[i].desc}</p>
-                        ${prices(featuredProducts[i].curPrice)}
+                        <p class="product-row__desc d-md-none d-lg-block">${products[i].desc}</p>
+                        ${prices(products[i].curPrice)}
                         <div class="btn__wrapper">
-                          <button class="btn-order add-btn" data-id=${featuredProducts[i].id} >MUA NGAY</button>
+                          <button class="btn-order add-btn" data-id=${products[i].id} >MUA NGAY</button>
                           <button class="btn-rounded"> <i class="fa-solid fa-magnifying-glass"></i></button>
                           <button class="btn-rounded"> <i class="fa-solid fa-heart"></i></button>
                         </div>
@@ -50,7 +68,9 @@ const displayColumnProducts = (featuredProducts) => {
     };
 
     productList.innerHTML = list;
-    addEventBtn(featuredProducts);
+    filterType(productAll);
+    pagination(productAll, 12, totalNum);
+    addEventBtn(productAll);
     return;
   }
 };

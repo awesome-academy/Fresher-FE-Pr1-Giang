@@ -2,14 +2,14 @@ mixin navLink(text, link)
     li.nav-link
         a(href=`${link}`)=text
 
-mixin navList(navList)
+mixin navList(id)
     nav 
-        ul 
-            each val in navList
-                    li.mb-2 
-                        a 
-                            i(class="fa-solid fa-angle-right")
-                            span=val
+        ul(id=`${id}`) 
+            //- each val in navList
+            //-         li.mb-2 
+            //-             a 
+            //-                 i(class="fa-solid fa-angle-right")
+            //-                 span=val
 
 mixin footerNav(data)
     .footer-nav

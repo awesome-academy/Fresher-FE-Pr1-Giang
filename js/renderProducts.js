@@ -10,7 +10,7 @@ const getProducts = async () => {
   const newProducts = productList.filter(product => product.type === "new");
   const allProducts = productList.filter(product => product.type === "regular");
 
-  displayColumnProducts(featuredProducts);
+  await displayColumnProducts(productList);
   displayBestSelling(bestSellingProducts);
   displayDiscounts(discountProducts);
   displayNewProducts(newProducts);
